@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+:root
+{
+	--piros: #ed1b24;
+	--feher: #fff;
+	--menu-color: #f0efed;
+	--fekete: #000;
+	--mg-left: 17%;
+	--mg-right: 17%;
+	--menu-szelesseg: 67%;
+	--main-font: 'Montserrat Alternates', sans-serif;
+	--s-font: 'Nunito Sans', sans-serif;
+}
+
+@media only screen and (max-width: 1450px) {
+
+:root
+{
+	--mg-left: 10%;
+	--mg-right: 10%;
+	--menu-szelesseg: 80%;
+}
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+:root
+{
+	--mg-left: 4%;
+	--mg-right: 4%;
+	--menu-szelesseg: 92%;
+}
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+:root
+{
+	--mg-left: 1%;
+	--mg-right: 1%;
+	--menu-szelesseg: 98%;
+}
+
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+}
+
+
+.vissza
+{
+	background-color: var(--piros);
+	padding: 0.5%;
+	position: fixed;
+	margin: 1% 0% 0% 1%;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.vissza i
+{
+	font-size: 250%;
+}
+
+.test
+{
+	text-align: center;
+}
+
+h1
+{
+	margin-top: 3%;
+	font-family: var(--main-font);
+	font-size: 250%;
+}
+
+.fuggoleges_flex
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #f2f2f2;
+    margin-top: 10%;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.right_tabel
+{
+    display: flex;
+    gap: 0;
+    text-align: left;
+}
+
+.left_side
+{
+    width: 30%;
+    border: solid 2px var(--fekete);
+    font-size: 180%;
+    padding: 2%;
+    font-family: var(--s-font);
+    margin: 0;
+}
+
+.right_side
+{
+    width: 70%;
+    border: solid 2px var(--fekete);
+    font-size: 180%;
+    padding: 2%;
+    font-family: var(--s-font);
+    font-weight: bold;
+    margin: 0;
+}
+
+.profilkep_edit_data
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: solid white 2px;
+    box-sizing: border-box;
+    display: block;
+    left: 50%;
+    background-color: transparent;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+
+.mezo
+{
+	font-size: 70%;
+	padding: 2%;
+	width: 80%;
+}
+
+.submit
+{
+	padding: 1%;
+	cursor: pointer;
+	font-size: 70%;
+	margin-top: 1%;
+	border: solid 2px white;
+	background-color: var(--piros);
+	color: #fff;
+}
+
+@media only screen and (max-width: 900px) {
+
+.vissza
+{
+	padding: 1%;
+	width: 36px;
+	height: 36px;
+	margin: 3% 0% 0% 3%;
+}
+
+.vissza i
+{
+	font-size: 200%;
+}
+
+h1
+{
+	font-size: 130%;
+	margin-top: 16%;
+}
+
+.fuggoleges_flex
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #f2f2f2;
+    margin-top: 18%;
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.5);
+    padding: 1%;
+}
+
+.right_tabel
+{
+    display: flex;
+    gap: 0;
+    text-align: left;
+    flex-direction: column;
+}
+
+.left_side
+{
+    border: solid 0px var(--fekete);
+    font-size: 120%;
+    width: 95.5%;
+}
+
+.right_side
+{
+    border: solid 0px var(--fekete);
+    font-size: 120%;
+    width: 95.5%;
+}
+
+.profilkep_edit_data
+{
+    width: 50px;
+    height: 50px;
+}
+
+.mezo
+{
+	font-size: 70%;
+	padding: 1%;
+	width: 90%;
+}
+
+.submit
+{
+	padding: 1.5%;
+	font-size: 75%;
+}
+
+}

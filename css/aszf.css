@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+:root
+{
+	font-size: 18px;
+	--piros: #ed1b24;
+	--mg-left: 17%;
+	--mg-right: 17%;
+	--menu-szelesseg: 67%;
+	--main-font: 'Montserrat Alternates', sans-serif;
+	--s-font: 'Nunito Sans', sans-serif;
+}
+
+@media only screen and (max-width: 1450px)
+{
+
+	:root
+	{
+		--mg-left: 10%;
+		--mg-right: 10%;
+		--menu-szelesseg: 80%;
+	}
+
+}
+
+
+@media only screen and (max-width: 1100px)
+{
+	:root
+	{
+		--mg-left: 4%;
+		--mg-right: 4%;
+		--menu-szelesseg: 92%;
+	}
+}
+
+}
+body
+{
+	margin: 0;
+}
+.container
+{
+	display: flex;
+	justify-content: center;
+	margin: 2% var(--mg-left);
+	font-family: 'Nunito Sans', sans-serif;
+}
+.a
+{
+	list-style-type: upper-roman;
+}
+.fejezet
+{
+	list-style: none;
+}
+.fejezet > li
+{
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+/* bold move */
+.fejezet-cim
+{
+	font-weight: bold;
+	font-size: 20px;
+}
+.sustok
+{
+	padding-top: 2%;
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
+}
+.click-click
+{
+	font-weight: bold;
+	color: #ed1b24;
+	transition: 0.25s;
+}
+.click-click:hover
+{
+	cursor: pointer;
+	transition: 0.25s;
+	color: #a12292;
+}
+li::marker
+{
+	font-weight: bold;
+}
