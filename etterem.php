@@ -574,6 +574,52 @@ if (isset($_GET['f'])) {
         </div>
         
 
+        <section class="foglalt">
+            <div class="fog_conn">
+                <h2>Foglaltsági táblázat</h2>
+                <p>Válassz ki egy dátumot a lentiekben és nézd meg, hogy vajon az adott napon melyik időpontokban foglalt a megadott lakásétterem. A dátum kiválasztása után nyomj a megtekintés gombara. Ezt követően rendszerünk ki fogja írni melyik időpontak a foglaltak. Ha nincs az adott napon foglalt időpont, akkor azt fogja írni, hogy "Nem található az adott napon aktív foglalás!".</p>
+                <form action="./etterem.php" method="GET">
+                    <label for="datum">Válassz dátumot</label>
+                    <input type="date" name="datum" required>
+                    <button name="sub">Megtekintés</button>
+                </form>
+
+                <div class="eredmeny" id="foglalt">
+
+                <?php
+
+                if (isset($_GET['fdatum'])) {
+                    $foglalas_datum = $_GET['fdatum'];
+
+                    echo "<h2>Foglalt időpontok a kiválasztott napon:</h2><p>";
+
+                        $sql = "SELECT * FROM foglalasok WHERE etteremID = $ID AND datum = '$foglalas_datum'";
+                            $result = $conn->query($sql);
+                            if ($result->fetch_assoc() != null) {
+                                     
+                                while ($row = $result->fetch_assoc()) 
+                                {
+                                    echo $row['idopont'] . "<br>";
+                                }
+
+                            }
+                            else
+                            {
+                                echo "Nem található az adott napon aktív foglalás!";
+                            }
+            
+                        echo "</p>";
+                       
+                }
+
+                ?>                    
+                    
+                </div>
+
+
+            </div>
+        </section>
+
 
     </main>
 
