@@ -581,6 +581,7 @@ if (isset($_GET['f'])) {
                 <form action="php/etteremdatum.php" method="POST">
                     <label for="datum">Válassz dátumot</label>
                     <input type="date" name="datum" required>
+                    <?php echo "<input type='hidden' name='eid' value='$ID'>"; ?>
                     <button name="sub">Megtekintés</button>
                 </form>
 
