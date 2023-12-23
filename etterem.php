@@ -29,6 +29,7 @@ require_once 'php/conn.php';
                 $etteremleiras = $row['etteremleiras'];
                 $menuID = $row['menuID'];
                 $etteremID = $row['ID'];
+                $vid = $row['vid'];
             }
 
             $sql = "SELECT * FROM menuk WHERE menuID = $menuID";
@@ -619,6 +620,20 @@ if (isset($_GET['f'])) {
 
 
             </div>
+
+
+            <?php
+
+            if($vid != null) {
+                echo "<div class='vid'>
+                
+                <iframe src='$vid' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>
+
+            </div>";
+            }
+
+             ?>
+
         </section>
 
 

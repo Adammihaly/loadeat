@@ -1339,3 +1339,43 @@ select {
 }
 
 }
+
+
+.vid
+{
+  width: 50%;
+  margin: 0% 25% 5% 25%;
+}
+
+iframe
+{
+  height: 40vh;
+  width: 100% !important;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+.vid
+{
+  width: 80%;
+  margin: 0% 10% 5% 10%;
+}
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+.vid
+{
+  width: 90%;
+  margin: 5% 5% 5% 5%;
+}
+
+iframe
+{
+  height: 30vh;
+}
+
+}
