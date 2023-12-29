@@ -169,39 +169,39 @@ LOADEAT.com is an online platform that connects apartment restaurants with guest
 <div class="ajanlas_conn">
 	<h1>Recommended for you</h1>
 	<div class="ajanlas_flex">
-		<a href="" class="aitem">
+		<a href="https://loadeat.com/en/etterem?eid=69351" class="aitem">
 			<div class="img_conn">
 				<div class="atlatszo-div">
 					<i class="bi bi-star-fill"></i>
-					<h5>Nora Lakásétterem</h5><br>
-			<p class="location">Magyarország, Zamárdi, Szent István út 3</p>
+					<h5>Palkonyha</h5><br>
+			<p class="location">Palkonya, Fő u.76. (Magyarország)</p>
 
 				</div>
-			<img src="../img/img3.jpg" alt="">
+			<img src="../img/palkonyha.jpg" alt="etterem kep">
 			</div>
 			
 		</a>
-		<a href="" class="aitem">
+		<a href="https://loadeat.com/en/etterem?eid=56390" class="aitem">
 			<div class="img_conn">
 				<div class="atlatszo-div">
 					<i class="bi bi-star-fill"></i>
-					<h5>Legyen itt a te éttermed neve</h5><br>
-			<p class="location">Itt pedig az utca, település és házszám</p>
+					<h5>A Pajta Lakásétterem</h5><br>
+			<p class="location">Bakonykoppány, Petőfi utca 46/A (Magyarország)</p>
 
 				</div>
-			<img src="../img/img1.jpg" alt="">
+			<img src="../img/pajta.jpg" alt="eterem kep">
 			</div>
 			
 		</a>
-		<a href="" class="aitem">
+		<a href="https://loadeat.com/en/etterem?eid=98558" class="aitem">
 			<div class="img_conn">
 				<div class="atlatszo-div">
 					<i class="bi bi-star-fill"></i>
-					<h5>Nora Lakásétterem</h5><br>
-			<p class="location">Magyarország, Zamárdi, Szent István út 3</p>
+					<h5>Columban’s lakásétterem</h5><br>
+			<p class="location">Siklós, Felszabadulás 21 (Magyarország)</p>
 
 				</div>
-			<img src="../img/img2.jpg" alt="">
+			<img src="../img/col.jpg" alt="etterem kep">
 			</div>
 			
 		</a>
