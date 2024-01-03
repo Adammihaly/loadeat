@@ -274,7 +274,7 @@ LOADEAT.com is an online platform that connects apartment restaurants with guest
 		</div>
 		<br>
 		<div class="logo_footer"><img src="../img/logo.jpg" alt="logo"></div>
-		<div class="cop">Copyright 2023. | LOADEAT.com</div>
+		<div class="cop">Copyright 2024. | LOADEAT.com</div>
 	</div>
 </div>
 

@@ -280,7 +280,7 @@ plaćanje. Upravljanje sajtom je jednostavno, bezbedno, i nudi najbolje cene za 
 		</div>
 		<br>
 		<div class="logo_footer"><img src="../img/logo.jpg" alt="logo"></div>
-		<div class="cop">Copyright 2023. | LOADEAT.com</div>
+		<div class="cop">Copyright 2024. | LOADEAT.com</div>
 	</div>
 </div>
 
