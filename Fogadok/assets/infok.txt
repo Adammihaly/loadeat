@@ -1,0 +1,6 @@
+Header - Inter 96px
+Alcim - Inter
+Szovegtomb - oxygen
+footer - nunito
+CTA color - #ED1B24
+Szovegtomb color - #757575

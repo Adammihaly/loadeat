@@ -1,0 +1,201 @@
+:root
+{
+    --Header_Font : 'Inter';
+    --Alcim_Font : 'Inter';
+    --Szovegtomb_font: 'Oxygen';
+    --Footer_font: 'Nunito';
+    --CTA_color : #ED1B24;
+    --Szovegtomb_color: #757575;
+    --Nav_bgcolor: #171717;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    object-fit: cover;
+}
+
+
+nav
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding-inline: 5%;
+    /* background-color: #252525; */
+ 
+    & img
+    {
+        height: 70%;
+    }
+
+    .linkek
+    {
+        display: flex;
+        gap: 3vw;
+        position: relative;
+        
+
+        & a
+        {
+            position: relative;
+            color: white;
+            text-decoration: none;    
+        }
+    
+    
+        & a::before
+        {
+            position: absolute;
+            bottom: -10%;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1.5px;
+            background-color: white;
+            transition: transform 0.5s ease;
+            transform: scaleX(0);
+                    
+         }
+    
+        & a:hover::before
+        {
+            transform: scaleX(1);
+        }
+        
+
+        .zaszlok
+        {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: calc(1em + 0.2vw);
+            /* padding: 0.2vw; */
+            overflow-y: hidden;
+            transform: translate(-150%);
+            transition: height ease 0.3s;
+
+            & p
+            {
+                width: 5vw;
+                text-align: center;
+
+                & img
+                {
+                    width: 30%;
+                }
+            }
+
+            & a:hover::before
+            {
+                content: '';
+                transform: scale(0);
+            }
+           
+        }
+
+        .zaszlok:hover
+        {
+            height: 5em;
+        }
+
+     
+
+
+
+
+    }
+
+ 
+
+     
+}
+
+header
+{
+    background-image: url(assets/hatter.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+
+    .blur
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: brightness(0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & h1
+        {
+            width: 40vw;
+            text-align: center;
+            font-size: 5vw;
+            font-family: var(--Header_Font);
+            color: white;
+            border-bottom: .3vh solid white;
+
+            & span
+            {
+                color: var(--CTA_color);
+            }
+        }
+
+        & i
+        {
+            color: white;
+            font-family: var(--Header_Font);
+            font-size: 2vw;
+            margin-top: 1vh;
+            margin-bottom: 5vh;
+        }
+
+        & div
+        {
+            display: flex;
+            gap: 2vw;
+
+            & select, input
+            {
+                outline: none;
+                height: 8vh;
+                font-size: 1.4vw;
+                padding: .5vw;
+                font-family: var(--Header_Font);
+            }
+        }
+
+        & button
+        {
+            margin-top: 5vh;
+            width: 13vw;
+            padding: .5vw;
+            font-size: 3vh;
+            color: white;
+            font-family: var(--Header_Font);
+            border-radius: .5vw;
+            border: none;
+            background-color: var(--CTA_color);
+        }
+    }
+}
