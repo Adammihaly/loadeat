@@ -41,6 +41,16 @@ nav
         height: 70%;
     }
 
+    .fa-bars
+    {
+        display: none;
+    }
+
+    & aside
+    {
+        display: none;
+    }
+
     .linkek
     {
         display: flex;
@@ -53,6 +63,7 @@ nav
             position: relative;
             color: white;
             text-decoration: none;    
+            font-size: 1vw;
         }
     
     
@@ -83,7 +94,7 @@ nav
             position: absolute;
             top: 0;
             left: 0;
-            height: calc(1em + 0.2vw);
+            height: 1vw;
             padding-inline: 0.2vw;
             overflow-y: hidden;
             transform: translate(-150%);
@@ -93,6 +104,7 @@ nav
 
             & p
             {
+                font-size:1vw;
                 width: 5vw;
                 text-align: center;
 
@@ -112,7 +124,7 @@ nav
 
         .zaszlok:hover
         {
-            height: 5em;
+            height: 4vw;
             background-color: rgba(37, 37, 37, 0.5);
 
         }
@@ -183,8 +195,7 @@ header
             & select, input
             {
                 outline: none;
-                height: 8vh;
-                font-size: 1.4vw;
+                font-size: 1.2vw;
                 padding: .5vw;
                 font-family: var(--Header_Font);
             }
@@ -193,9 +204,9 @@ header
         & button
         {
             margin-top: 5vh;
-            width: 13vw;
+            width: 12vw;
             padding: .5vw;
-            font-size: 3vh;
+            font-size: 1.3vw;
             color: white;
             font-family: var(--Header_Font);
             border-radius: .5vw;
@@ -243,6 +254,7 @@ main
                 width: 50%;
                 text-align: center  ;
                 padding-bottom: 1vh;
+                font-size: 2vw;
             }
 
             & p
@@ -251,6 +263,7 @@ main
                 color: var(--Szovegtomb_color);
                 text-align: center;
                 margin-top: 2vh;
+                font-size: 1.1vw;
             }
 
             & button
@@ -263,6 +276,14 @@ main
                 border: none;
                 border-radius: .5vw;
                 font-family: var(--Header_Font);
+                font-size: 1vw;
+                transition: transform ease 0.2s;
+                cursor: pointer;
+            }
+
+            & button:hover
+            {
+                transform: scale(1.1);
             }
         }
     }
@@ -280,6 +301,7 @@ main
             width: 50%;
             border-bottom: 0.5vh solid var(--CTA_color);
             text-align: center;
+            font-size: 2vw;
         }
     }
 
@@ -327,6 +349,12 @@ main
                 color: white;
                 border: none;
                 padding-bottom: 0;
+                font-size: 2vw;
+            }
+
+            & p
+            {
+                font-size: 1.4vw;
             }
 
         }
@@ -364,6 +392,7 @@ footer
                 text-decoration: none;
                 color: white;
                 font-family: var(--Footer_font);
+                font-size: 1.2vw;
             }
         }
     }
@@ -391,6 +420,237 @@ footer
         {
             font-family: var(--Footer_font);
             color: #E0E0E0;
+            font-size: 1vw;
+        }
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+    
+    nav
+    {
+        height: 6vh;
+        
+        .fa-bars
+        {
+            display: block;
+            color: white;
+            font-size: 3vh;
+            z-index: 100;
+        }
+
+        & aside
+        {
+            /* display: flex; */
+            position: fixed;
+            align-items: center;
+            justify-content: center;
+            gap: 5vh;
+            top: 0;
+            right: 0;
+            flex-direction: column-reverse;
+            width: 60vw;
+            height: 100vh;
+            background-color: #252525;
+
+            & p
+            {
+                display: flex;
+                align-items: center;
+                gap: 1vw;
+
+                & img
+                {
+                    height: 2vh;
+                }
+            }
+
+            & a
+            {
+                font-size: 2vh;
+                text-decoration: none;
+                color: white;
+            }
+
+            & i {
+                align-self:flex-end;
+            }
+        }
+
+        .linkek
+        {
+            display: none;
+        }
+    }
+
+    header
+    {
+        .blur
+        {
+            & h1
+            {
+                font-size: 8vh;
+                text-align: center;
+                width: 80%;
+            }
+
+            & i
+            {
+                font-size: 3vh;
+            }
+
+            & div
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                & select, input
+                {
+                    font-size: 2.2vh;
+                    padding: .5vh;
+                }
+            }
+
+            & button
+            {
+                width: 30%;
+                height: auto;
+                padding: 1vh;
+                font-size: 2vh;
+            }
+        }
+
+    }
+
+    main
+    {
+        padding-inline: 5vh;
+
+        & section
+        {
+            margin-top: 5vh;
+            flex-direction: column;
+
+            & img
+            {
+                width: 100%;
+            }
+
+            & div
+            {
+
+                & h2
+                {
+                    font-size: 2vh;
+                }
+
+                & p
+                {
+                    font-size: 1.2vh;
+                }
+
+                & button
+                {
+                    font-size: 1.8vh;
+                    width: 40%;
+                    border-radius: .5vh;
+                }
+            }
+        }
+
+        & section:nth-child(2)
+        {
+            flex-direction: column-reverse;
+        }
+
+        .cim
+        {
+            padding-block-start: 10vh;
+
+            & h1
+            {
+                font-size: 3vh;
+                padding-bottom: 2vh;
+                width: 70%;
+            }
+        }
+
+        .kartyak
+        {
+            align-items: center;
+            gap: 5vh;
+
+            .container
+            {
+                border-radius: 5vh;
+                width: 90%;
+            }
+
+            & div
+            {
+                & h2
+                {
+                    width: auto;
+                    font-size: 3vh;
+                }
+
+                & p
+                {
+                    font-size: 2vh;
+                }
+
+            }
+        }
+    }
+
+    footer
+    {
+        margin-top: 10vh;
+
+        .nav_items
+        {
+            border-bottom: #ED1B24 solid 0.2vh;
+            width: 90%;
+
+            & ul
+            {
+                & a
+                {
+                    text-decoration: none;
+                    color: white;
+                    font-family: var(--Footer_font);
+                    font-size: .9vh;
+                }
+            }
+        }
+
+        .Codeefy
+        {
+            color: white;
+            padding: 1vh;
+
+            & div
+            {
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 1vh;
+
+                & i
+                {
+                    font-size: 1.2vh;
+                }
+
+            
+            }
+
+            & p
+            {
+                font-family: var(--Footer_font);
+                color: #E0E0E0;
+                font-size: 1vh;
+            }
         }
     }
 }

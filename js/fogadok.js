@@ -17,3 +17,9 @@ document.getElementById('ido').addEventListener('change', () => {
     }
     
 })
+
+
+document.getElementById('hamburger').addEventListener('click', () => {
+    
+    document.getElementById('menu').style.display = (document.getElementById('menu').style.display === 'none' || document.getElementById('menu').style.display === "") ? 'flex' : 'none';  
+})
