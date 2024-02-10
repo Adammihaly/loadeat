@@ -1,0 +1,190 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    position: relative;
+}
+
+main
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #252525;
+    position: relative;
+    overflow: hidden;
+
+    .logo
+    {
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 10%;
+        height: 5%;
+        z-index: 2;
+    }
+
+    & section
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .elso
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(100 0, 100% 0, 100% 100%);
+        cursor: pointer;
+
+        & img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            filter: brightness(0.5);
+        }
+
+        & h1,p
+        {
+            color: white;
+            font-family: 'Inter';
+            font-size: 5vw;
+            top: 50%;
+            right: 15%;
+            position: absolute;
+             
+
+        }
+
+        & p
+        {
+            font-size: 2vw;
+            width: 40%;
+            right: 5%;
+            top: 65%;
+        }
+    }
+
+    .elso:hover img
+    {
+        transform: scale(1.05);
+    }
+
+    .masodik
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        cursor: pointer;
+
+        & img
+        {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            filter: brightness(0.5);
+
+        }
+
+        
+        & h1,p
+        {
+            color: white;
+            font-family: 'Inter';
+            font-size: 5vw;
+            top:15%;
+            left: 10%;
+            position: absolute;
+             
+
+        }
+
+        & p
+        {
+            font-size: 2vw;
+            width: 40%;
+            right: 5%;
+            top:30%;
+        }
+    }
+
+    .masodik:hover img
+    {
+        transform: scale(1.05);
+    }
+
+
+    & nav
+    {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 2%;
+        right: 0;
+        align-items: center;
+        gap: 2%;
+
+        & p
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            gap: 10%;
+            position: relative;
+            cursor: pointer;
+
+            & img
+            {
+                height: 100%;
+                aspect-ratio: 1;
+            }
+
+            & a
+            {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        & p::before
+        {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0.3vh;
+            background-color: white;
+            transition: width ease 0.3s;
+        }
+
+        & p:hover::before
+        {
+            width: 100%;
+        }
+    }
+
+
+}
+
+
+main:hover > section:not(:hover)
+{
+    filter: blur(5px);
+}
+
+
+
