@@ -8,6 +8,24 @@
 body
 {
     position: relative;
+
+    & h3
+    {
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Poppins';
+        font-size: 5vw;
+        max-width: fit-content;
+        font-family: 'Poppins';
+        overflow: hidden;
+        border-right: .15em solid orange; 
+        white-space: nowrap; 
+        animation: 
+          kiiras 4s steps(100, end) forwards,
+          villogas .5s step-end infinite;
+    }
 }
 
 main
@@ -17,6 +35,9 @@ main
     background-color: #252525;
     position: relative;
     overflow: hidden;
+    animation: megjelenes 2s forwards 4s,  pointer_e 0.1s forwards 6s;
+    opacity: 0;
+    pointer-events: none;
 
     .logo
     {
@@ -27,6 +48,7 @@ main
         width: 10%;
         height: 5%;
         z-index: 2;
+        pointer-events: none;
     }
 
     & section
@@ -156,6 +178,7 @@ main
             {
                 text-decoration: none;
                 color: white;
+                font-size: 1.2vw;
             }
         }
 
@@ -186,5 +209,90 @@ main:hover > section:not(:hover)
     filter: blur(5px);
 }
 
+@keyframes kiiras {
+    0%{width: 0;}
+    50%{width: 100%;}
+    100%{width: 0%; display: none;}
+  }
+  
+@keyframes villogas {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+@keyframes megjelenes {
+    0%{opacity:0;}
+    100%{opacity: 1;}
+}
+
+@keyframes pointer_e {
+    from{pointer-events: none;}
+    to{pointer-events: all;}
+}
+
+@media screen and (max-width:850px) {
+    
+    body
+    {
+        & h3
+        {
+            font-size: 6vw;
+        }
+    }
+
+    main
+    {
+        height: 100dvh;
+
+        .logo
+        {
+            width: 20%;
+            height: 3%;
+        }
+
+        .elso
+        {
+            & h1
+            {
+                font-size: 4vh;
+                right: 12%;
+                top: 60%;
+            }
+
+            & p
+            {
+                font-size: 1.5vh;
+                top: 68%;
+                right: 7%;
+                
+            }
+        }
+
+        .masodik
+        {
+            & h1
+            {
+                font-size: 4vh;
+                right: 12%;
+            }
+
+            & p
+            {
+                font-size: 1.5vh;
+                top: 23%;
+            }
+        }
+
+        & nav
+        {
+            gap: 10%;
+
+            & p
+            {
+                height: 3vh;
+            }
+        }
+    }
+}
 
 
