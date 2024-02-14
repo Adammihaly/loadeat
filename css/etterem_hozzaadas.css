@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    padding-inline: 2vw;
+    padding-top: 2vw;
+    font-family: 'Inter';
+    position: relative;
+    height: 100dvh;
+}
+
+h1
+{
+    font-size: 2vw;
+    margin-bottom: 1vh;
+    height: 6vh;
+}
+form
+{
+    
+    height: 80vh;
+    border: 1px solid black;
+    position: relative;
+
+    & section
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:0 ;
+        height:0 ;
+        opacity: 0;
+        color: rgb(0, 0, 0);
+        overflow-y: auto;
+        font-size: 1.2vw;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(243, 243, 243);
+        gap: 2vh;
+
+
+        & h2
+        {
+            text-align: center;
+        }
+
+        .input_field
+        {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-block-end: 3vw;
+            padding-block-start: 2vw;
+            padding-inline: 2vw;
+            border-radius: 1vw;
+            border: 1px solid gray;
+            background-color: white;
+            gap: 1vh;
+
+            & input
+            {
+                width: 30%;
+                height: 5vh;
+                padding: 1vw;
+                outline: solid 1px gray;
+                border: none;
+                font-size: 1.1vw;
+            }
+
+            & i
+            {
+                position: absolute;
+                left: 55%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40%;
+                font-size: 1.1vw;
+                color: gray;
+                font-style: normal;
+            }
+        }
+
+        .checkbox_field
+        {
+            position: relative;
+            padding-block-end: 3vw;
+            padding-block-start: 2vw;
+            padding-inline: 2vw;
+            border-radius: 1vw;
+            border: 1px solid gray;
+            background-color: white;
+
+            & input
+            {
+                margin-top: .5vh;
+                width: 1vw;
+                aspect-ratio: 1;
+            }
+
+            & i
+            {
+                position: absolute;
+                left: 55%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40%;
+                font-size: 1.1vw;
+                color: gray;
+                font-style: normal;
+            }
+        }
+
+        .kep_field
+        {
+            position: relative;
+            padding-block-end: 3vw;
+            padding-block-start: 2vw;
+            padding-inline: 2vw;
+            border-radius: 1vw;
+            border: 1px solid gray;
+            background-color: white;
+
+            & input
+            {
+                margin-top: 2vh;
+                font-size: 1.1vw;
+            }
+        }
+    }
+
+
+
+
+  
+}
+
+
+.buttons
+{
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    
+    & button
+    {
+        font-size: 1.4vw;
+        padding: 0.3vw;
+        background-color: #ED1B24;
+        color: white;
+        border:none;
+        width: 10%;
+        border-radius: .5vw;
+    }
+}
