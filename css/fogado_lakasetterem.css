@@ -290,6 +290,11 @@ main:hover > section:not(:hover)
             & p
             {
                 height: 3vh;
+
+                & a
+                {
+                    font-size: 1vh;
+                }
             }
         }
     }
