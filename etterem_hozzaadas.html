@@ -8,18 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Étterem hozzáadása  (<span id="oldal_szam">1</span>/7)</h1>
+    <h1>Étterem hozzáadása  (<span id="oldal_szam">1</span>/5)</h1>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="" id="form" method="post" enctype="multipart/form-data">
         <section id="1">
             <h2>A tulajdonos adatai</h2>
             <div class="input_field">
                 <p>Teljes név / Vállalkozás neve <span style="color: red;">*</span></p>
-                <input type="text" id="nev" name="nev" placeholder="Név" required>
-            </div>
-            <div class="input_field">
-                <p>Adószám <span style="color: red;">*</span></p>
-                <input type="number" id="adoszam" name="adoszam" placeholder="Adószám" required>
+                <input type="text" id="nev" name="tulajdonos_neve" placeholder="Név" required>
             </div>
             <div class="input_field">
                 <p>Körzet / Megye / Tartomány <span style="color: red;">*</span></p>
@@ -27,11 +23,15 @@
             </div>
             <div class="input_field">
                 <p>Telefonszám <span style="color: red;">*</span></p>
-                <input type="number" id="telszam" name="telszam" placeholder="Telefonszám" required>
+                <input type="number" id="telszam" name="telefonszam" placeholder="Telefonszám" required>
             </div>
             <div class="input_field">
                 <p>Cím (Ország, Helység, Utca és házszám)<span style="color: red;"> *</span></p>
-                <input type="text" id="cim" name="cim" placeholder="Ország, Helység, Utca és házszám" required>
+                <input type="text" id="cim" name="tulajdonos_cime" placeholder="Ország, Helység, Utca és házszám" required>
+            </div>
+            <div class="input_field">
+                <p>Adószám <span style="color: red;">*</span></p>
+                <input type="number" id="adoszam" name="adoszam" placeholder="Adószám" required>
             </div>
             <div class="input_field">
                 <p>IBAN számlaszám<span style="color: red;"> *</span></p>
@@ -40,7 +40,7 @@
             </div>
         </section>
         <section id="2">
-            <h2>A lakásétterem adatai <span style="color: red;"> *</span></h2>
+            <h2>A lakásétterem adatai</h2>
             <div class="input_field">
                 <p>Az étterem neve <span style="color: red;"> *</span></p>
                 <input type="text" id="etterem_nev" name="etterem_nev" placeholder="Név" required>
@@ -63,26 +63,98 @@
                 <label for="fizetes_készpénz">Helyszini készpénzes fizetés<br></label>
                 <input type="checkbox" id="fizetes_kartya" name="fizetes_kartya">
                 <label for="fizetes_kartya">Helyszini kártyás fizetés</label>
-                <i>Mi a helyzet az Online fizetéssel?<br>Az Online fizetést NEM lehet kikapcsolni, tehát ez a funkció autómatikusan be van aktiválva minden lakásétterem részére. Amennyiben ez önnek problémát okoz, kérjük keresse fel ügyfélszolgálatunk.</i>
+                <i><strong>Mi a helyzet az Online fizetéssel?</strong><br>Az Online fizetést NEM lehet kikapcsolni, tehát ez a funkció autómatikusan be van aktiválva minden lakásétterem részére. Amennyiben ez önnek problémát okoz, kérjük keresse fel ügyfélszolgálatunk.</i>
             </div>
             <div class="kep_field">
                 <p>Képek az étteremről (maximum 5 darab) <span style="color: red;"> *</span></p>
-                <input type="file"  name="kep_input[]" id="kep_input" accept=".jpg, .jpeg, .png, .webp" multiple="multiple" required>
+                <input type="file"  name="etterem_kepek" id="etterem_kepek" accept=".jpg, .jpeg, .png, .webp" multiple="multiple" required>
             </div>
-
-
-
+            <div class="input_field">
+                <p>Étterem leírása <span style="color: red;"> *</span></p>
+                <textarea id="etterem_leiras" name="etterem_leiras" rows="5" cols="50" placeholder="Étterem leírasa..." required></textarea>
+            </div>
         </section>
-        <section id="3">kerekpar</section>
-        <section id="4">idsjl</section>
-        <section id="5"></section>
-        <section id="6"></section>
-        <section id="7"><h1>vege</h1></section>
+        <section id="3">
+            <h2>Első menü adatai</h2>
+            <div class="input_field">
+                <p>Menü neve <span style="color: red;"> *</span></p>
+                <input type="text" id="elsomenu_neve" name="elsomenu_neve" placeholder="Név" required>
+            </div>      
+            <div class="input_field">
+                <p>Menü tartalma és leírása<span style="color: red;"> *</span></p>
+                <textarea id="elsomenu_leirasa" name="elsomenu_leirasa" placeholder="A menü tartalma..." rows="5" cols="50" required></textarea>
+            </div> 
+            <div class="input_field">
+                <p>Menü ára euróban (€) <span style="color: red;"> *</span></p>
+                <input type="number" id="elsomenu_euro" name="elsomenu_euro" placeholder="X EUR" required>
+                <p>Menü ára forintban (Ft.) <span style="color: red;"> *</span></p>
+                <input type="number" id="elsomenu_forint" name="elsomenu_forint" placeholder="X Ft." required>
+                <p>Menü ára dinárban (RSD) <span style="color: red;"> *</span></p>
+                <input type="number" id="elsomenu_dinar" name="elsomenu_dinar" placeholder="X RSD" required>
+                <i><strong>FONTOS!</strong><br>Az étterem tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
+            </div>   
+            <div class="kep_field">
+                <p>Képek a menüről (maximum 5 darab) <span style="color: red;"> *</span></p>
+                <input type="file"  name="elsomenu_kepek" id="elsomenu_kepek" accept=".jpg, .jpeg, .png, .webp" multiple="multiple" required>
+            </div>
+        </section>
+        <section id="4">
+            <h2>Második menü adatai</h2>
+            <div class="input_field">
+                <p>Menü neve <span style="color: red;"> *</span></p>
+                <input type="text" id="masodikmenu_neve" name="masodikmenu_neve" placeholder="Név" required>
+            </div>      
+            <div class="input_field">
+                <p>Menü tartalma és leírása<span style="color: red;"> *</span></p>
+                <textarea id="masodikmenu_leirasa" name="masodikmenu_leirasa" placeholder="A menü tartalma..." rows="5" cols="50" required></textarea>
+            </div> 
+            <div class="input_field">
+                <p>Menü ára euróban (€) <span style="color: red;"> *</span></p>
+                <input type="number" id="masodikmenu_euro" name="masodikmenu_euro" placeholder="X EUR" required>
+                <p>Menü ára forintban (Ft.) <span style="color: red;"> *</span></p>
+                <input type="number" id="masodikmenu_forint" name="masodikmenu_forint" placeholder="X Ft." required>
+                <p>Menü ára dinárban (RSD) <span style="color: red;"> *</span></p>
+                <input type="number" id="masodikmenu_dinar" name="masodikmenu_dinar" placeholder="X RSD" required>
+                <i><strong>FONTOS!</strong><br>Az étterem tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
+            </div>   
+            <div class="kep_field">
+                <p>Képek a menüről (maximum 5 darab) <span style="color: red;"> *</span></p>
+                <input type="file"  name="masodikmenu_kepek" id="masodikmenu_kepek" accept=".jpg, .jpeg, .png, .webp" multiple="multiple" required>
+            </div>
+        </section>
+        <section id="5">
+            <h2>Harmadik menü adatai</h2>
+            <div class="input_field">
+                <p>Menü neve <span style="color: red;"> *</span></p>
+                <input type="text" id=" harmadikmenu_neve" name=" harmadikmenu_neve" placeholder="Név" required>
+            </div>      
+            <div class="input_field">
+                <p>Menü tartalma és leírása<span style="color: red;"> *</span></p>
+                <textarea id=" harmadikmenu_leirasa" name=" harmadikmenu_leirasa" placeholder="A menü tartalma..." rows="5" cols="50" required></textarea>
+            </div> 
+            <div class="input_field">
+                <p>Menü ára euróban (€) <span style="color: red;"> *</span></p>
+                <input type="number" id=" harmadikmenu_euro" name=" harmadikmenu_euro" placeholder="X EUR" required>
+                <p>Menü ára forintban (Ft.) <span style="color: red;"> *</span></p>
+                <input type="number" id=" harmadikmenu_forint" name=" harmadikmenu_forint" placeholder="X Ft." required>
+                <p>Menü ára dinárban (RSD) <span style="color: red;"> *</span></p>
+                <input type="number" id=" harmadikmenu_dinar" name= "harmadikkmenu_dinar" placeholder="X RSD" required>
+                <i><strong>FONTOS!</strong><br>Az étterem tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
+            </div>   
+            <div class="kep_field">
+                <p>Képek a menüről (maximum 5 darab) <span style="color: red;"> *</span></p>
+                <input type="file"  name="harmadikmenu_kepek" id="harmadikmenu_kepek" accept=".jpg, .jpeg, .png, .webp" multiple="multiple" required>
+            </div>
+        </section>
+
+        <div class="buttons">    
+            <button type="button" id="hatra">Vissza</button>
+            <button type="button" id="elore">Tovább</button>
+            <button type="submit" id="submit" onclick="validateForm()">Befejez</button>
+        </div>
+
     </form>
-    <div class="buttons">    
-        <button id="hatra">Vissza</button>
-        <button id="elore">Tovább</button>
-    </div>
+ 
 
     <script src="js/fogadok_hozzaadasa.js"></script>
 </body>
