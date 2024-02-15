@@ -10,6 +10,7 @@ body
     font-family: 'Inter';
     position: relative;
     height: 100dvh;
+    background-color: rgb(243, 243, 243);
 }
 
 h1
@@ -23,7 +24,6 @@ form
 {
     
     height: 80vh;
-    border: 1px solid black;
     position: relative;
 
     & section
@@ -39,7 +39,6 @@ form
         font-size: 1.2vw;
         display: flex;
         flex-direction: column;
-        background-color: rgb(243, 243, 243);
         gap: 2vh;
 
 
@@ -56,7 +55,7 @@ form
             padding-block-end: 3vw;
             padding-block-start: 2vw;
             padding-inline: 2vw;
-            border-radius: 1vw;
+            border-radius: .3vw;
             border: 1px solid gray;
             background-color: white;
             gap: 1vh;
@@ -168,5 +167,112 @@ form
         border:none;
         width: 10%;
         border-radius: .5vw;
+    }
+}
+
+
+@media (max-width:850px) {
+
+    h1
+    {
+        font-size: 2vh;
+        margin: 0;
+        height: 4vh;
+    }
+    
+    form
+    {
+        height: 85dvh;
+        border: 1px solid black;
+
+        & section
+        {
+            font-size: 1.3vh;
+
+            .input_field
+            {
+                border-radius: .5vh;
+
+                & input
+                {
+                    width: 50%;
+                    padding: 1vh;
+                    height: fit-content;
+                    outline: solid 1px gray;
+                    border: none;
+                    font-size: 1vh;
+                    border-radius: .2vh;
+                }
+
+                & i
+                {
+                    font-size: .8vh;
+                    text-align: center;
+                }
+
+                & textarea
+                {
+                    font-size: 1vh;
+                }
+
+            }
+
+            .checkbox_field
+            {
+                
+                
+                & p
+                {
+                    font-size: 1.1vh;
+                }
+
+                .container
+                {
+                    transform: translateY(-10%);
+                }
+
+                & input
+                {
+                    /* margin-top: .5vh; */
+                    width: .8vh;
+                    transform: translateY(35%);
+                                        
+                    
+                }
+
+                & label
+                {
+                    font-size: 1vh;
+                }
+
+             
+                & i
+                {
+                    transform: translate(10%,-40%);
+                    font-size: .8vh;
+                    text-align: center;
+                }
+            }
+
+            .kep_field
+            {    
+                & input
+                {
+                    margin-top: 1vh;
+                    font-size: 1vh;
+                }
+            }
+        }
+    }
+
+    .buttons
+    {
+        & button
+        {
+            border-radius: .5vh;
+            font-size: 2vh;
+            width: fit-content;
+            padding-inline: 2vh;
+        }
     }
 }
