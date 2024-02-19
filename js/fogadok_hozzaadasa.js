@@ -35,7 +35,15 @@ function szamlalo()
 
     }
 
-    hatra_gomb.disabled = szam === 0;
+    if(szam === 0)
+    {
+        hatra_gomb.style.display = 'none';
+    }
+    else
+    {
+        hatra_gomb.style.display = 'block';
+    }
+    
     elore_gomb.disabled = szam === tomb.length - 1;
 
     if(szam === tomb.length-1)
