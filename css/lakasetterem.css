@@ -365,6 +365,9 @@ main
             border-radius: 1vw;
             overflow: hidden;
             cursor: pointer;
+            display: flex;
+            width: 100%;
+            aspect-ratio: 1;
         }
 
         .container:hover img
@@ -464,11 +467,12 @@ footer
            
         }
 
-        & p
+        & p, a
         {
             font-family: var(--Footer_font);
             color: #E0E0E0;
             font-size: 1vw;
+            text-align: center;
         }
     }
 }
@@ -728,7 +732,7 @@ footer
             
             }
 
-            & p
+            & p, a
             {
                 font-family: var(--Footer_font);
                 color: #E0E0E0;
