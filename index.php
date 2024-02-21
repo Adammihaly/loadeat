@@ -13,10 +13,10 @@
     <link rel="icon" type="image/x-icon" href="img/logo.jpg">
 
 
-<meta name="description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára.">
+<meta name="description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára. Fogalaljon asztalt most!">
 
 
-    <meta name="keywords" content="lakasetterem, lakásétterem, étterem, étkezés loadeat, loadeatcom, kaja, ennivaló, menü, etterem, soklakasetterem, lakáséttermek, éttermek, kereső, hírdető, hirdetes, etkeztetes, etteremtulaj, vendég, vendeg, ügyfél, ugyfel">
+    <meta name="keywords" content="lakasetterem, lakásétterem, étterem, étkezés loadeat, loadeatcom, kaja, ennivaló, menü, etterem, soklakasetterem, lakáséttermek, éttermek, kereső, hírdető, hirdetes, etkeztetes, etteremtulaj, vendég, vendeg, ügyfél, ugyfel, asztalfoglalas, asztalfoglalás">
 
     <meta name="author" content="Loadeat">
     <link rel="canonical" href="https://loadeat.com">
@@ -141,7 +141,7 @@ if ($result) {
         <section>
             <div>
                 <h2>Rólunk</h2>
-                <p>A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára.</p>
+                <p>A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Asztalfoglalás pár kattintás segítségével lehetséges. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára. Fogalaljon asztalt most!</p>
             </div>
             <img src="./img/etterem1.jpg" alt="">
         </section>
@@ -149,7 +149,7 @@ if ($result) {
             <img src="./img/etterem2.jpeg" alt="">
             <div>
                 <h2>Használat</h2>
-                <p>A LOADEAT.com weboldala lehetővé teszi a felhasználók számára, hogy böngésszenek a rendelkezésre álló lakáséttermek között, foglalásokat végezzenek, értékeléseket és visszajelzéseket adjanak, valamint online fizetéseket hajtsanak végre. A platformon a lakáséttermek bemutathatják ételkínálatukat, áraikat, elérhetőségüket, és közvetlenül kapcsolatba léphetnek a vendégekkel. A felhasználóknak lehetőségük nyílik regisztrálni mint lakásétterem tulajdonos, vagy mint vendég. Aki étterem tulajdonosként regisztrál, az létre tudja hozni saját lakáséttermének a profilját. Ezen keresztül találnak rá a vendégek egy adott éttermére, és itt történik a foglalás és az egyéb műveletek.</p>
+                <p>A LOADEAT.com weboldala lehetővé teszi a felhasználók számára, hogy böngésszenek a rendelkezésre álló lakáséttermek között, foglalásokat végezzenek, értékeléseket és visszajelzéseket adjanak, valamint online fizetéseket hajtsanak végre. A platformon a lakáséttermek bemutathatják ételkínálatukat, áraikat, elérhetőségüket, és közvetlenül kapcsolatba léphetnek a vendégekkel. A felhasználóknak lehetőségük nyílik regisztrálni mint lakásétterem tulajdonos, vagy mint vendég. Aki étterem tulajdonosként regisztrál, az létre tudja hozni saját lakáséttermének a profilját. Ezen keresztül találnak rá a vendégek egy adott éttermére, és itt történik a foglalás és az egyéb műveletek. Fogalaljon asztalt most!</p>
                 <a href="regfaj">Regisztráció</a>
             </div>
         </section>
