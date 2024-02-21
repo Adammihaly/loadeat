@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loadeat • Regisztráció</title>
-    <link rel="stylesheet" type="text/css" href="css/regisztracio.css">
+    <link rel="stylesheet" type="text/css" href="../css/regisztracio.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
 </head>
 <body>
@@ -20,9 +20,9 @@ $lang = 'hu';
 
 <div class="conn">
     <div class="tartalom">
-        <img src="img/etterem.png" alt="">
+        <img src="../img/etterem.png" alt="">
         <h1>Regisztráció mint tulajdonos</h1>
-        <form method="POST" action="php/singuptulaj.inc.php"><br>
+        <form method="POST" action="../php/singuptulaj.inc.php"><br>
             <label>Felhasználónév</label><br>
             <input type="text" name="felhasznalonev" id="" placeholder="Felhasználónév" minlength="6" maxlength="25" required><br>
             <label>Email cím</label><br>

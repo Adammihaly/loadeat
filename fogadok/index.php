@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/fogadok.css">
+    <link rel="stylesheet" href="../css/fogadok.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:wght@300&family=Oxygen:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
     <title>Loadeat • Kezdőlap</title>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
 
-    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link rel="icon" type="image/x-icon" href="../img/logo.jpg">
 
 
 <meta name="description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára. Fogalaljon asztalt most!">
@@ -26,7 +26,7 @@
     <meta property="og:type" content="weboldal" />
     <meta property="og:description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára." />
     <meta property="og:url" content="https://loadeat.com" />
-    <meta property="og:image" content="img/img1.jpg" />
+    <meta property="og:image" content="../img/img1.jpg" />
 
 
 
@@ -45,30 +45,30 @@
 <body>
 
     <nav>
-        <img src="./img/logo.jpg">
+        <img src="../img/logo.jpg">
         <div class="linkek">
 
             <div class="zaszlok">
-                <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
-                <p><img src="./img/america.webp" alt=""> <a href="">USD</a></p>
-                <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
+                <p><img src="../img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
+                <p><img src="../img/america.webp" alt=""> <a href="">USD</a></p>
+                <p><img src="../img/srb.webp" alt=""> <a href="">RSD</a></p>
             </div> 
             <a href="">Ügyfélszolgálat</a>
-            <a href="fogadok/regfaj">Regisztráció</a>
-            <a href="lakasetterem.html">Lakáséttermek</a>
-            <a href="">Belépés</a>
+            <a href="regfaj">Regisztráció</a>
+            <a href="https://loadeat.com">Lakáséttermek</a>
+            <a href="bejelentkezes">Belépés</a>
         </div>
 
         <!-- TELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
             <i class="fa-solid fa-bars" id="hamburger"></i>
             <aside id="menu">
-                <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
-                <p><img src="./img/america.webp" alt=""> <a href="">USD</a></p>
-                <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
+                <p><img src="../img/srb.webp" alt=""> <a href="">RSD</a></p>
+                <p><img src="../img/america.webp" alt=""> <a href="">USD</a></p>
+                <p><img src="../img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
                 <a href="">Ügyfélszolgálat</a>
-                <a href="">Regisztráció</a>
-                <a href="">Belépés</a>
-                <a href="lakasetterem.html">Lakáséttermek</a>
+                <a href="regfaj">Regisztráció</a>
+                <a href="bejelentkezes">Belépés</a>
+                <a href="https://loadeat.com">Lakáséttermek</a>
             </aside>
         <!-- TELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
     </nav>
@@ -98,7 +98,7 @@
     </header>
     <main>
         <section>
-            <img src="./img/rolunk.jpg" alt="">
+            <img src="../img/rolunk.jpg" alt="">
             <div>
                 <h2>Rólunk</h2>
                 <p>A LOADEAT.com egy online platform, amely összeköti a fogadókat a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi fogadókkal való kapcsolatfelvételre, foglalásra és fizetésre. Asztalfoglalás pár kattintás segítségével lehetséges. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára. Fogalaljon asztalt most!</p>
@@ -110,13 +110,13 @@
                 <p>A LOADEAT.com weboldala lehetővé teszi a felhasználók számára, hogy böngésszenek a rendelkezésre álló fogadók között, foglalásokat végezzenek, értékeléseket és visszajelzéseket adjanak, valamint online fizetéseket hajtsanak végre. A platformon a fogadók bemutathatják ételkínálatukat, áraikat, elérhetőségüket, és közvetlenül kapcsolatba léphetnek a vendégekkel. A felhasználóknak lehetőségük nyílik regisztrálni mint fogadó tulajdonos, vagy mint vendég. Aki fogadó tulajdonosként regisztrál, az létre tudja hozni saját fogadójának a profilját. Ezen keresztül találnak rá a vendégek egy adott fogadóra, és itt történik a foglalás és az egyéb műveletek. Fogalaljon asztalt most!</p>
                 <a href="">Regisztráció</a>
             </div>
-            <img src="./img/hasznalat.jpg" alt="">
+            <img src="../img/hasznalat.jpg" alt="">
         </section>
         <div class="cim"><h1>Neked ajánlott</h1></div>
         <section class="kartyak">
             
             <a href="" class="container">
-                <img src="./img/fogado1.jpg">
+                <img src="../img/fogado1.jpg">
                 <div>
                     <h2>Pálkonyha</h2>
                     <p>Pálkonyha, Fő u.76</p>
@@ -124,7 +124,7 @@
             </a>
 
             <a href="" class="container">
-                <img src="./img/fogado2.jpg">
+                <img src="../img/fogado2.jpg">
                 <div>
                     <h2>Pajta</h2>
                     <p>Bakonykoppány, Petőfi utca 46/A</p>
@@ -132,7 +132,7 @@
             </a>
 
             <a href="" class="container">
-                <img src="./img/fogado3.jpg">
+                <img src="../img/fogado3.jpg">
                 <div>
                     <h2>Columban's</h2>
                     <p>Siklós, Felszabadulás 21</p>
@@ -176,6 +176,6 @@
         </div>
     </footer>
     
-    <script src="./js/fogadok.js"></script>
+    <script src="../js/fogadok.js"></script>
 </body>
 </html>
