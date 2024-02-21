@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Loadeat • Kezdőlap</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/lakasetterem.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:wght@300&family=Oxygen:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
+    <title>Loadeat • Kezdőlap</title>
 
-	<link rel="icon" type="image/x-icon" href="img/logo.jpg">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
+
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
 
 
 <meta name="description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára.">
@@ -38,7 +41,6 @@
   gtag('config', 'G-9VPB42BQJQ');
 </script>
 
-
 </head>
 <body>
 
@@ -59,43 +61,48 @@ if (isset($_GET['fo'])) {
 
 ?>
 
-<div class="menu">
-	<div class="flex_menu_conn">
-		<div class="menu_img_conn">
-		<a href="#"><img src="img/logo.jpg" alt="logo" class="logo_menu"></a>
-		</div>
-		<div class="menu_data_conn">
-			<a href="#"><img src="img/hun.png" alt="hun" class="flag" id="flag" onclick="zaszlok();"></a>
-			<div class="alnyelvek" id="zaszlok">
-		    <a href="rs/"><img src="img/srb.png" alt="srb" class="flag"></a><br>
-			<a href="en/"><img src="img/eng.png" alt="eng" class="flag"></a><br>
-			</div>
-			<a href="#" class="lang_menu">HUF</a>
-			<a href="" class="menu_ugyfelszolgalat">Ügyfélszolgálat</a>
-			<a href="bejelentkezes" class="belebes_menu_button">Belépés</a>
-			<a href="bejelentkezes" class="belebes_menu_button_mobile"><i class="bi bi-person"></i></a>
-		</div>
-	</div>
-</div>
+    <nav>
+        <img src="./img/logo.jpg">
+        <div class="linkek">
 
+            <div class="zaszlok">
+                <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
+                <p><img src="./img/america.webp" alt=""> <a href="">EUR</a></p>
+                <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
+            </div> 
+            <a href="">Ügyfélszolgálat</a>
+            <a href="regfaj">Regisztráció</a>
+            <a href="">Fogadók</a>
+            <a href="bejelentkezes">Belépés</a>
+        </div>
 
-
-<div class="fejlec">
-	<div class="fejlec_content">
-		<h1><span class="red">Load</span><span class="black">eat</span></h1>
-		<h2>- You're going to eat anyways!</h2>
-		<div class="kereses">
-		<label>Keresd meg a számodra legtökéletesebb lakáséttermet:</label><br>
-			<form  method="POST" action="php/kereses.php">			
-				<select type="text" name="helyseg" required="required" placeholder="Add meg a helységet" class="helyseg_input">
-
-
-					<option value='' selected='selected' disabled='disabled'>Válassz megyét / körzetet</option>
-  					<?php
-  					require_once 'php/conn.php';
+        <!-- TELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+            <i class="fa-solid fa-bars" id="hamburger"></i>
+            <aside id="menu">
+                <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
+                <p><img src="./img/america.webp" alt=""> <a href="">EUR</a></p>
+                <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
+                <a href="">Ügyfélszolgálat</a>
+                <a href="regfaj">Regisztráció</a>
+                <a href="bejelentkezes">Belépés</a>
+                <a href="">Fogadók</a>
+            </aside>
+        <!-- TELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+    </nav>
+    <header>
+        <div class="blur">
+            <h1><span>Load</span>eat</h1>
+            <strong>Lakáséttermek</strong>
+            <div>
+                <form method="POST" action="php/kereses.php">
+                <select name="helyseg" id="megye" required>
+                    <option value="placeholder" selected="selected" disabled>Válassz megyét / körzetet</option>
+                    
+                    <?php
+                    require_once 'php/conn.php';
 $telepules = '';
 $ismetlodoMegyek = array(); // Segédtömb az ismétlődő megyék nyilvántartására
-
+mysqli_set_charset($conn, "utf8");
 $sql = "SELECT * FROM etterem";
 $result = $conn->query($sql);
 
@@ -111,235 +118,122 @@ if ($result) {
     }
     $result->free(); 
 } 
-
-echo $telepules;
+ echo $telepules;
 ?>
 
+                </select>
+                <input type="date" id="datum" name="datum" placeholder="Válassz dátumot" required>
 
-
-
-				</select>
-				<input type="text" name="datum" required="required" class="datum_input"  onfocus="(this.type='date')" placeholder="Válassz dátumot" onblur="(this.type='text')">
-				<select name="idopont" id="idopont" required>
-  					<option value='' selected='selected' disabled='disabled'>Válassz időpontot</option>
-  					<option value="11:30 - 13:00">11:30 - 13:00</option>
+                <select name="idopont" id="ido" required>
+                    <option value='' selected='selected' disabled='disabled'>Válassz időpontot</option>
+                    <option value="11:30 - 13:00">11:30 - 13:00</option>
                     <option value="13:30 - 15:00">13:30 - 15:00</option>
                     <option value="15:30 - 17:00">15:30 - 17:00</option>
                     <option value="17:30 - 19:00">17:30 - 19:00</option>
                     <option value="19:30 - 21:00">19:30 - 21:00</option>
-				</select>
-							
-				<button class="submit-buton" name="sub"><i class="bi bi-search"></i>Keresés</button>
-			</form>
-		</div>
-		<h3>🔑 Biztonságos és megbízható&nbsp;&nbsp;&nbsp;<br class="inv"> 📄 Egyszerű&nbsp;&nbsp;&nbsp;<br class="inv"> 💲 Garantált legjobb árak</h3>
-	</div>	
-</div>
+                </select>
+            </div>
+            <button name="sub">Keresés</button>
+        </form>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2>Rólunk</h2>
+                <p>A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára.</p>
+            </div>
+            <img src="./img/etterem1.jpg" alt="">
+        </section>
+        <section>
+            <img src="./img/etterem2.jpeg" alt="">
+            <div>
+                <h2>Használat</h2>
+                <p>A LOADEAT.com weboldala lehetővé teszi a felhasználók számára, hogy böngésszenek a rendelkezésre álló lakáséttermek között, foglalásokat végezzenek, értékeléseket és visszajelzéseket adjanak, valamint online fizetéseket hajtsanak végre. A platformon a lakáséttermek bemutathatják ételkínálatukat, áraikat, elérhetőségüket, és közvetlenül kapcsolatba léphetnek a vendégekkel. A felhasználóknak lehetőségük nyílik regisztrálni mint lakásétterem tulajdonos, vagy mint vendég. Aki étterem tulajdonosként regisztrál, az létre tudja hozni saját lakáséttermének a profilját. Ezen keresztül találnak rá a vendégek egy adott éttermére, és itt történik a foglalás és az egyéb műveletek.</p>
+                <a href="regfaj">Regisztráció</a>
+            </div>
+        </section>
+        <div class="cim"><h1>Fogadók</h1></div>
+        <section class="fogado_leiras">
+            <div>
+                <img src="./img/ett.png" alt="">
+                <p>Tekintsd meg a fogadó környékét is, és keresd meg azt a helyet, amely a leginkább megfelelő a következő étkezéshez. Figyelj a különböző ételkülönlegességekre hogy megtaláld a számodra legideálisabb fogadót.</p>
+            </div>
+            <div>
+                <img src="./img/etterem.png" alt="">
+                <p>Tekintsd meg, mi található a közeledben, mert biztos lehetsz benne, hogy a környékeden is megtalálható a szükséges minőségű fogadókat. Ne felejts el felfedezni a helyi ízeket és ételkínálatot, mivel gyakran a közelben rejlő helyek kínálnak kiváló minőségű ételeket és egyedi gasztronómiai élményeket.</p>
+            </div>
+            <div>
+                <img src="./img/vendeg.png" alt="">
+                <p>Oldalunkon kedvező árakat és foglalási lehetőségeket találsz. Könnyedén hozzáférhetsz az aktuális ajánlatokhoz, és egyszerűen lefoglalhatod a kiválasztott helyet az étkezéshez.</p>
+            </div>
 
+            <a href="">Tovább</a>
+        </section>
+        <div class="cim"><h1>Neked ajánlott</h1></div>
+        <section class="kartyak">
+            
+            <a href="https://loadeat.com/etterem?eid=69351" class="container">
+                <img src="img/palkonyha.jpg">
+                <div>
+                    <h2>Pálkonyha</h2>
+                    <p>Pálkonyha, Fő u.76</p>
+                </div>
+            </a>
 
+            <a href="https://loadeat.com/etterem?eid=56390" class="container">
+                <img src="img/pajta.jpg">
+                <div>
+                    <h2>Pajta</h2>
+                    <p>Bakonykoppány, Petőfi utca 46/A</p>
+                </div>
+            </a>
 
+            <a href="https://loadeat.com/etterem?eid=98558" class="container">
+                <img src="img/col.jpg">
+                <div>
+                    <h2>Columban's</h2>
+                    <p>Siklós, Felszabadulás 21</p>
+                </div>
+            </a>
 
-<div class="m_sz">
-	<p>Találd meg oldalunkon <b class="white">GARANTÁLTAN</b> a legjobb lakáséttermeket!</p>
-</div>
-
-
-
-<div class="r_buttons">
-	<button id="button_rolunk" class="active" onclick="rolunk_lathato();">Rólunk</button>
-	<button id="button_hasznalat" class="" onclick="hasznalat_lathato();">Használat</button>
-	<button id="reg" class="" onclick="reg();">Regisztráció</button>
-</div>
-
-
-
-<div class="rolunk_conn" id="rolunk">
-	<h4>Rólunk</h4>
-	<p>
-A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára.</p>
-</div>
-<div class="hasznalat_conn" id="hasznalat">
-	<h4>Használat</h4>
-	<p>A LOADEAT.com weboldala lehetővé teszi a felhasználók számára, hogy böngésszenek a rendelkezésre álló lakáséttermek között, foglalásokat végezzenek, értékeléseket és visszajelzéseket adjanak, valamint online fizetéseket hajtsanak végre. A platformon a lakáséttermek bemutathatják ételkínálatukat, áraikat, elérhetőségüket, és közvetlenül kapcsolatba léphetnek a vendégekkel.
-A felhasználóknak lehetőségük nyílik regisztrálni mint lakásétterem tulajdonos, vagy mint vendég. Aki étterem tulajdonosként regisztrál, az létre tudja hozni saját lakáséttermének a profilját. Ezen keresztül találnak rá a vendégek egy adott éttermére, és itt történik a foglalás és az egyéb műveletek.</p>
-</div>
-
-
-<div class="ajanlas_conn">
-	<h1>Neked ajánlott</h1>
-	<div class="ajanlas_flex">
-		<a href="https://loadeat.com/etterem?eid=69351" class="aitem">
-			<div class="img_conn">
-				<div class="atlatszo-div">
-					<i class="bi bi-star-fill"></i>
-					<h5>Palkonyha</h5><br>
-			<p class="location">Palkonya, Fő u.76. (Magyarország)</p>
-
-				</div>
-			<img src="img/palkonyha.jpg" alt="etterem kep">
-			</div>
-			
-		</a>
-		<a href="https://loadeat.com/etterem?eid=56390" class="aitem">
-			<div class="img_conn">
-				<div class="atlatszo-div">
-					<i class="bi bi-star-fill"></i>
-					<h5>A Pajta Lakásétterem</h5><br>
-			<p class="location">Bakonykoppány, Petőfi utca 46/A (Magyarország)</p>
-
-				</div>
-			<img src="img/pajta.jpg" alt="eterem kep">
-			</div>
-			
-		</a>
-		<a href="https://loadeat.com/etterem?eid=98558" class="aitem">
-			<div class="img_conn">
-				<div class="atlatszo-div">
-					<i class="bi bi-star-fill"></i>
-					<h5>Columban’s lakásétterem</h5><br>
-			<p class="location">Siklós, Felszabadulás 21 (Magyarország)</p>
-
-				</div>
-			<img src="img/col.jpg" alt="etterem kep">
-			</div>
-			
-		</a>
-	</div>
-</div>
-
-
-
-<div class="fill_div">
-	<div class="mrg_conn">
-		<div class="conntent_felx_div">
-			<div class="elem_gyujto_ic">
-				<div class="korr_div"><i class="bi bi-trophy ikon"></i></div>
-				<p>A legjobb lakáséttermek a régióban</p>
-			</div>
-			<div class="elem_gyujto_ic">
-				<div class="korr_div"><i class="bi bi-clock ikon"></i></div>
-				<p>Gyors és rugalmas foglalás folyamatosan</p>
-			</div>
-			<div class="elem_gyujto_ic">
-				<div class="korr_div"><i class="bi bi-shield-lock ikon"></i></div>
-				<p>Teljesen biztonságos használat</p>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="patrners">
-	<h1>Partnereink</h1>
-	<div class="partners_flex">
-		<a href=""><img src="./img/p1.jpg" alt="Partner logo"></a>
-		<a href=""><img src="./img/berg.jpg" alt="Partner logo"></a>
-		<a href="https://nora-lakasettermek7.webnode.hu"><img src="./img/nl.png" alt="Partner logo"></a>
-		<a href=""><img src="./img/nb.png" alt="Partner logo"></a>
-	</div>
-</div>
-
-
-
-
-<div class="footer">
-	<div class="footer_con">
-		<div class="f_flex">
-			<div>
-				<h1>Névjegy</h1>
-				<a href="mailto:test@gmail.com">E-mail: loadeat@loadeat.com</a><br><br>
-				<a href="">Tel: +36 702 53 33 34</a><br><br>
-				<a href="">Tel: +36 304 96 29 16</a><br><br>
-				<a href="">Cég: Loadeat.com Kft</a><br><br>
-				<a href="adat">Adatvédelem</a>
-			</div>
-			<div>
-				<h1>Népszerű oldalak</h1>
-				<a href="https://loadeat.com/">Kezdőlap</a><br><br>
-				<a href="bejelentkezes">Bejelentkezés</a><br><br>
-				<a href="info">Regisztráció</a>
-			</div>
-			<div>
-				<h1>Kiemelt partnereink</h1>
-				<a href="">Berg Electric</a><br><br>
-				<a href="">Nora Lakásétterem</a><br><br>
-				<a href="">Nora BIO Wellness</a><br><br>
-				
-			</div>
-			<div>
-				<h1>Hibaelhárítás</h1>
-				<a href="">Ügyfélszolgálat</a><br><br>
-				<a href="">E-mail: loadeat.support@gmail.com</a>
-			</div>
-		</div>
-		<br>
-		<div class="logo_footer"><img src="img/logo.jpg" alt="logo"></div>
-		<div class="cop">Copyright 2024. | LOADEAT.com</div>
-	</div>
-</div>
-
-
-
-
-
-
-<script type="text/javascript">
-	
-function reg() {
-    var ujUrl = "regfaj";
-    window.location.href = ujUrl;
-}
-
-function hasznalat_lathato() {
-	var rolunk = document.getElementById('rolunk');
-	var hasznalat = document.getElementById('hasznalat');
-
-	var rolunk_bt = document.getElementById('button_rolunk');
-	var hasznalat_bt = document.getElementById('button_hasznalat');
-
-	rolunk.style.display = 'none';
-	hasznalat.style.display = 'inline-block';
-
-
-	rolunk_bt.classList.remove('active');
-	hasznalat_bt.classList.add('active');
-
-}
-
-
-function rolunk_lathato() {
-	var rolunk = document.getElementById('rolunk');
-	var hasznalat = document.getElementById('hasznalat');
-
-	var rolunk_bt = document.getElementById('button_rolunk');
-	var hasznalat_bt = document.getElementById('button_hasznalat');
-
-	rolunk.style.display = 'inline-block';
-	hasznalat.style.display = 'none';
-
-
-	rolunk_bt.classList.add('active');
-	hasznalat_bt.classList.remove('active');
-
-}
-
-
-
-function zaszlok() {
-	var zaszlok = document.getElementById("zaszlok");
-
-	if(zaszlok.style.display == "none")
-	{
-		zaszlok.style.display = "block";
-	}
-	else
-	{
-		zaszlok.style.display = "none";
-	}
-
-}
-
-</script>
-
+        </section>
+    </main>
+    <footer>
+        <div class="nav_items">
+            <ul>
+                <a href=""><b>Névjegy</b></a>
+                <a href="mailto:loadeat@loadeat.com"><i class="fa-solid fa-envelope"></i> loadeat@loadeat.com</a>
+                <a href=""><i class="fa-solid fa-phone"></i> +36 702 53 33 34</a>
+                <a href=""><i class="fa-solid fa-phone"></i> + 36 304 96 29 16</a>
+                <a href="">Cég: Loadeat.com Kft</a>
+                <a href="adat">Adatvédelem</a>
+            </ul>
+            <ul>
+                <a href=""><b>Népszerű oldalak</b></a>
+                <a href="https://loadeat.com/">Kezdőlap</a>
+                <a href="bejelentkezes">Bejelentkezés</a>
+                <a href="regfaj">Regisztráció</a>
+            </ul>
+            <ul>
+                <a href=""><b>Kiemelt partnereink</b></a>
+                <a href="">Berg Electric</a>
+                <a href="">Nora Lakásétterem</a>
+                <a href="">Nora BIO Wellness</a>
+            </ul>
+            <ul>
+                <a href=""><b>Hibaelhárítás</b></a>
+                <a href="">Ügyfélszolgálat</a>
+                <a href="mailto:loadeat@loadeat.com"><i class="fa-solid fa-envelope"></i> loadeat@loadeat.com</a>
+            </ul>
+        </div>
+        <div class="Codeefy">
+            <div><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></div>
+            <p>Copyright © 2024 | LOADEAT.com </p><br>
+            <a href="https://codeefyit.com">Az oldalt készítette és forgalmazza a Codeefy</a>
+        </div>
+    </footer>
+    
+    <script src="./js/fogadok.js"></script>
 </body>
 </html>
