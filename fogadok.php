@@ -6,7 +6,41 @@
     <link rel="stylesheet" href="./css/fogadok.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito:wght@300&family=Oxygen:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Loadeat • Kezdőlap</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
+
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+
+
+<meta name="description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára. Fogalaljon asztalt most!">
+
+
+    <meta name="keywords" content="lakasetterem, lakásétterem, étterem, étkezés loadeat, loadeatcom, kaja, ennivaló, menü, etterem, soklakasetterem, lakáséttermek, éttermek, kereső, hírdető, hirdetes, etkeztetes, etteremtulaj, vendég, vendeg, ügyfél, ugyfel, asztalfoglalas, asztalfoglalás">
+
+    <meta name="author" content="Loadeat">
+    <link rel="canonical" href="https://loadeat.com">
+
+
+    <meta property="og:title" content="Loadeat" />
+    <meta property="og:type" content="weboldal" />
+    <meta property="og:description" content="A LOADEAT.com egy online platform, amely összeköti a lakáséttermeket a vendégekkel. A cég célja, hogy a vendégek számára egyszerű és kényelmes módot biztosítson a helyi lakáséttermekkel való kapcsolatfelvételre, foglalásra és fizetésre. Oldalunk használata egyszerű, biztonságos és a legjobb árajánlatokat kínálja mindenki számára." />
+    <meta property="og:url" content="https://loadeat.com" />
+    <meta property="og:image" content="img/img1.jpg" />
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VPB42BQJQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9VPB42BQJQ');
+</script>
+
 </head>
 <body>
 
@@ -20,7 +54,7 @@
                 <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
             </div> 
             <a href="">Ügyfélszolgálat</a>
-            <a href="">Regisztráció</a>
+            <a href="fogadok/regfaj">Regisztráció</a>
             <a href="lakasetterem.html">Lakáséttermek</a>
             <a href="">Belépés</a>
         </div>
