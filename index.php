@@ -93,7 +93,7 @@ if (isset($_GET['fo'])) {
         <div class="blur">
             <h1><span>Load</span>eat</h1>
             <strong>Lakáséttermek</strong>
-            <div>
+            
                 <form method="POST" action="php/kereses.php">
                 <select name="helyseg" id="megye" required>
                     <option value="placeholder" selected="selected" disabled>Válassz megyét / körzetet</option>
@@ -135,7 +135,7 @@ if ($result) {
             </div>
             <button name="sub">Keresés</button>
         </form>
-        </div>
+        
     </header>
     <main>
         <section>

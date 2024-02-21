@@ -189,7 +189,7 @@ header
             
         }
 
-        & div
+        & form
         {
             display: flex;
             gap: 2vw;
@@ -554,7 +554,7 @@ footer
                 font-size: 3vh;
             }
 
-            & div
+            & form
             {
                 display: flex;
                 flex-direction: column;
