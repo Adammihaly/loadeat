@@ -67,8 +67,8 @@ if (isset($_GET['fo'])) {
 
             <div class="zaszlok">
                 <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
-                <p><img src="./img/america.webp" alt=""> <a href="">EUR</a></p>
-                <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
+                <p><img src="./img/america.webp" alt=""> <a href="en/">EUR</a></p>
+                <p><img src="./img/srb.webp" alt=""> <a href="rs/">RSD</a></p>
             </div> 
             <a href="">Ügyfélszolgálat</a>
             <a href="regfaj">Regisztráció</a>
@@ -79,8 +79,8 @@ if (isset($_GET['fo'])) {
         <!-- TELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
             <i class="fa-solid fa-bars" id="hamburger"></i>
             <aside id="menu">
-                <p><img src="./img/srb.webp" alt=""> <a href="">RSD</a></p>
-                <p><img src="./img/america.webp" alt=""> <a href="">EUR</a></p>
+                <p><img src="./img/srb.webp" alt=""> <a href="rs/">RSD</a></p>
+                <p><img src="./img/america.webp" alt=""> <a href="en/">EUR</a></p>
                 <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
                 <a href="">Ügyfélszolgálat</a>
                 <a href="regfaj">Regisztráció</a>
