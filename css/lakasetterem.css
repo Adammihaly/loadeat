@@ -193,6 +193,7 @@ header
         {
             display: flex;
             gap: 2vw;
+            position: relative;
 
             & select, input
             {
@@ -206,6 +207,10 @@ header
 
         & button
         {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
             margin-top: 5vh;
             width: 12vw;
             padding: .5vw;
@@ -215,14 +220,9 @@ header
             border-radius: .5vw;
             border: none;
             background-color: var(--CTA_color);
-            transition: transform 0.3s ease;
             cursor: pointer;
         }
-
-        & button:hover
-        {
-            transform: scale(1.1);
-        }
+        
     }
 }
 
