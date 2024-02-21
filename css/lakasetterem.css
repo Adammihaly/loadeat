@@ -564,13 +564,13 @@ footer
                 {
                     font-size: 2.2vh;
                     padding: .5vh;
-                    width:50vw;
+                    width:55vw;
 
                 }
 
                 :nth-child(1)
                 {
-                    width: 60vw;
+                    width: 75vw;
                 }
             }
 

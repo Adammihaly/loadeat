@@ -132,7 +132,6 @@ if ($result) {
                     <option value="17:30 - 19:00">17:30 - 19:00</option>
                     <option value="19:30 - 21:00">19:30 - 21:00</option>
                 </select>
-            </div>
             <button name="sub">Keresés</button>
         </form>
         

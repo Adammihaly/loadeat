@@ -189,7 +189,7 @@ header
             
         }
 
-        & div
+        & form
         {
             display: flex;
             gap: 2vw;
@@ -521,7 +521,7 @@ footer
                 font-size: 3vh;
             }
 
-            & div
+            & form
             {
                 display: flex;
                 flex-direction: column;
@@ -531,13 +531,13 @@ footer
                 {
                     font-size: 2.2vh;
                     padding: .5vh;
-                    width:50vw;
+                    width:55vw;
 
                 }
 
                 :nth-child(1)
                 {
-                    width: 60vw;
+                    width: 70vw;
                 }
             }
 
