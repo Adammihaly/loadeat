@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Loadeat • Kezelőpult</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
-	<link rel="stylesheet" type="text/css" href="css/kpult.css">
+	<link rel="stylesheet" type="text/css" href="../css/kpult.css">
 </head>
 <body>
 
@@ -82,7 +82,7 @@ if (isset($_GET['error'])) {
 		<ul id="chat-menu-content">
 			<li class="chat-head">
 				<a href="####" class="chat-head-content" target="_blank">
-					<img src="img/img3.jpg">
+					<img src="../img/img3.jpg">
 					<div>
 						<span class="chat-head-title">Kis János</span>
 						<span>Én : szép napot</span>
@@ -91,7 +91,7 @@ if (isset($_GET['error'])) {
 			</li>
 			<li class="chat-head">
 				<a href="####" class="chat-head-content" target="_blank">
-					<img src="img/img3.jpg">
+					<img src="../img/img3.jpg">
 					<div>
 						<span class="chat-head-title">Erika Teller</span>
 						<span>Erika: igen</span>
@@ -100,7 +100,7 @@ if (isset($_GET['error'])) {
 			</li>
 			<li class="chat-head">
 				<a href="####" class="chat-head-content" target="_blank">
-					<img src="img/img3.jpg">
+					<img src="../img/img3.jpg">
 					<div>
 						<span class="chat-head-title">Halász Dév</span>
 						<span>Én: Mennyi?</span>
@@ -111,7 +111,7 @@ if (isset($_GET['error'])) {
 	</div>
 	<div class="menu">
 		<div class="left-item">
-			<a href="#"><img src="img/logo.jpg" alt="logo" class="logo"></a>
+			<a href="#"><img src="../img/logo.jpg" alt="logo" class="logo"></a>
 		</div>
 		<div id="phone-list-icon">
 			<i class="bi bi-list" style="font-size: 1.5rem;"></i>
@@ -122,7 +122,7 @@ if (isset($_GET['error'])) {
 
 			<a href="">
 				<div class="profile flex-center">
-					<img src="img/img1.jpg">
+					<img src="../img/img1.jpg">
 					<span><?php echo $Felhasznalonev ?></span>
 				</div>
 			</a>
@@ -150,7 +150,7 @@ if (isset($_GET['error'])) {
 	else
 	{
 		echo "<a class='etterem' href='adatvaltoztatas'>
-		<img src='img/edit.png' alt=''>
+		<img src='../img/edit.png' alt=''>
 		<h3>Étterem kezelése</h3>
 	</a>";
 	}

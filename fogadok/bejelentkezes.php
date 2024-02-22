@@ -22,7 +22,7 @@ $lang = 'hu';
     <div class="tartalom">
         <img src="../img/login.png" alt="">
         <h1>Bejelentkezés</h1>
-        <form method="POST" action="../php/login.inc.php"><br>
+        <form method="POST" action="./php/login.inc.php"><br>
             <label>Felhasználónév vagy email cím</label><br>
             <input type="text" name="felhasznalonev" id="" placeholder="Felhasználónév vagy email cím" required><br>
             <label>Jelszó</label><br>

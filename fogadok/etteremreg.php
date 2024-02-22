@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Loadeat • Étterem hozzáadás</title>
-	<link rel="stylesheet" type="text/css" href="css/profilmodositas.css">
-	<link rel="stylesheet" type="text/css" href="css/etthoz.css">
+	<link rel="stylesheet" type="text/css" href="../css/profilmodositas.css">
+	<link rel="stylesheet" type="text/css" href="../css/etthoz.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css ">
 </head>
 <body>
@@ -43,7 +43,7 @@ if (isset($_GET['error'])) {
 <div class="conntent">
 	<h1>Étterem hozzáadása</h1>
 	<br>
-	<img src="img/tulaj.png" alt="icon" class="icon">
+	<img src="../img/tulaj.png" alt="icon" class="icon">
 	<h2>Étterem tulajdonos adatai</h2>
 	<form method="POST" action="php/addrestoran.php"  onsubmit="return validateForm()" enctype="multipart/form-data">
 		
@@ -80,7 +80,7 @@ if (isset($_GET['error'])) {
 <p>Étkezési időpont oldalunkon nem választható. Alapértelmezett időponttok:<br>11:30 - 13:00<br>13:30 - 15:00<br>15:30 - 17:00<br>17:30 - 19:00<br>19:30 - 21:00<br>Amennyiben egy adott napon nem dolgozik az étterem, a későbbiekben majd lehet beállítani "zárva" jelölést. Ez a jelölés vonatkozhat egy egész napra, vagy akár csak egy ebéd vagy vacsora idejére.</p><br>
 <label>Étterem leírása</label><br>
 		<textarea type="text" class="tb" name="bemutatas" placeholder="Mutasd be a lakáséttermed" maxlength="1000" required></textarea><br>
-	<img src="img/menu.png" alt="icon" class="icon fi">
+	<img src="../img/menu.png" alt="icon" class="icon fi">
 	<h2>Menük hozzáadása</h2>
 	<label>Első menü neve</label><br>
 		<input type="text" name="elsomenunev" placeholder="Menü neve" required><br>

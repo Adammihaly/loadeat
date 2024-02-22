@@ -22,7 +22,7 @@ $lang = 'hu';
     <div class="tartalom">
         <img src="../img/etterem.png" alt="">
         <h1>Regisztráció mint tulajdonos</h1>
-        <form method="POST" action="../php/singuptulaj.inc.php"><br>
+        <form method="POST" action="./php/singuptulaj.inc.php"><br>
             <label>Felhasználónév</label><br>
             <input type="text" name="felhasznalonev" id="" placeholder="Felhasználónév" minlength="6" maxlength="25" required><br>
             <label>Email cím</label><br>
