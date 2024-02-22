@@ -12,7 +12,7 @@ require_once 'php/conn.php';
         $ID = $_GET['eid'];
     }
 
-
+    mysqli_set_charset($conn, "utf8");
         $sql = "SELECT * FROM etterem WHERE ID = $ID";
             $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()) 

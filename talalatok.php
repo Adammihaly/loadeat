@@ -23,6 +23,7 @@
 $telepules = '';
 $ismetlodoMegyek = array(); // Segédtömb az ismétlődő megyék nyilvántartására
 
+mysqli_set_charset($conn, "utf8");
 $sql = "SELECT * FROM etterem";
 $result = $conn->query($sql);
 
