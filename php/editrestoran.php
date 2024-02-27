@@ -1,7 +1,7 @@
 <?php
 
-error_reporting(0);
-ini_set('display_errors', 0);
+error_reporting(1);
+ini_set('display_errors', E_ALL);
 	
 	session_start();
 if(!isset($_SESSION['ID']))
@@ -141,7 +141,7 @@ if ($result->num_rows > 0) {
             }
         }
 
-        $sqlDeleteImages = "UPDATE menuk SET etteremkepek = NULL WHERE ID = $etteremID";
+        $sqlDeleteImages = "UPDATE etterem SET etteremkepek = NULL WHERE ID = $etteremID";
         if ($conn->query($sqlDeleteImages) === TRUE) {   
         }
 
