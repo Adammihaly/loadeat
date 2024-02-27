@@ -125,7 +125,7 @@ if (isset($_GET['f'])) {
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="../css/reszletek.css">
 
-    <title>Loadeat • Étterem</title>
+    <title>Loadeat • Fogadó</title>
 </head>
 
 <body>
