@@ -271,7 +271,7 @@ else
 
 
 
-
+mysqli_set_charset($conn, "utf8");
     $sql = "INSERT INTO etterem (profID, ID, tulajdonosNev, igazolvanyazonosito, megye, telefon, tulajcim, iban, etteremnev, orszag, telepules, cim, onlinefizetes, helykeszpenz, helykartya, etteremkepek, etteremleiras, menuID) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -284,7 +284,7 @@ mysqli_stmt_bind_param($stmt, "ssssssssssssssssss",$ProfilID, $ID, $tulajNev, $i
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
-
+mysqli_set_charset($conn, "utf8");
     $sqll = "INSERT INTO menuk (menuID, menu1_nev, menu1_tartalom, menu1_areur, menu1_arhuf, menu1_arrsd, menu1_kepek, menu2_nev, menu2_tartalom, menu2_areur, menu2_arhuf, menu2_arrsd, menu2_kepek, menu3_nev,  	menu3_tartalom, menu3_areur, menu3_arhuf, menu3_arrsd, menu3_kepek) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 $stmtt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmtt, $sqll)) {

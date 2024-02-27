@@ -142,14 +142,14 @@ if (isset($_GET['error'])) {
 		$vaneetterem = $row['etterem'];
 
 	if ($vaneetterem != 1) {
-		echo "<a class='etterem' href='etteremreg'>
-		<img src='img/add.png' alt=''>
+		echo "<a class='etterem' href='fogadoreg'>
+		<img src='../img/add.png' alt=''>
 		<h3>Étterem hozzáadása</h3>
 	</a>";
 	}
 	else
 	{
-		echo "<a class='etterem' href='adatvaltoztatas'>
+		echo "<a class='etterem' href='fogadomodositas'>
 		<img src='../img/edit.png' alt=''>
 		<h3>Étterem kezelése</h3>
 	</a>";

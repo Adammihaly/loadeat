@@ -5,6 +5,6 @@ if (isset($_POST['sub'])) {
 	$etteremID = $_POST['eid'];
 
 
-		header("Location: ../etterem?eid=$etteremID&fdatum=$datum#foglalt");
+		header("Location: ../fogado?eid=$etteremID&fdatum=$datum#foglalt");
 		exit();
 }

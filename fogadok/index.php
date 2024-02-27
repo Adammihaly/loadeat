@@ -76,15 +76,35 @@
         <div class="blur">
             <h1><span>Load</span>eat</h1>
             <strong>Fogadók</strong>
-            <form>
-                <select name="megye" id="megye" >
+            <form method="POST" action="php/kereses.php">
+                <select name="helyseg" id="megye" required>
                     <option value="placeholder" disabled selected>Válassz megyét / körzetet</option>
-                    <option value="">Alma</option>
-                    <option value="">Korte</option>
-                </select>
-                <input type="date" id="datum" placeholder="Válassz dátumot">
+                    <?php
+                    require_once 'php/conn.php';
+$telepules = '';
+$ismetlodoMegyek = array(); // Segédtömb az ismétlődő megyék nyilvántartására
+mysqli_set_charset($conn, "utf8");
+$sql = "SELECT * FROM etterem";
+$result = $conn->query($sql);
 
-                <select name="ido" id="ido" >
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $megye = $row['megye'];
+        
+        // Ellenőrzés, hogy az adott megye már szerepel-e a listában
+        if (!in_array($megye, $ismetlodoMegyek)) {
+            $telepules .= '<option value="' . $megye . '">' . $megye . '</option>';
+            $ismetlodoMegyek[] = $megye;
+        }
+    }
+    $result->free(); 
+} 
+ echo $telepules;
+?>
+                </select>
+                <input type="date" id="datum" name="datum" placeholder="Válassz dátumot" required>
+
+                <select name="idopont" id="ido" required>
                     <option value='' selected='selected' disabled='disabled'>Válassz időpontot</option>
                     <option value="11:30 - 13:00">11:30 - 13:00</option>
                     <option value="13:30 - 15:00">13:30 - 15:00</option>
@@ -92,7 +112,7 @@
                     <option value="17:30 - 19:00">17:30 - 19:00</option>
                     <option value="19:30 - 21:00">19:30 - 21:00</option>
                 </select>
-                <button>Keresés</button>
+                <button name="sub">Keresés</button>
             </form>
         </div>
     </header>

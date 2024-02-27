@@ -12,7 +12,7 @@ require_once 'php/conn.php';
         $ID = $_GET['eid'];
     }
 
-
+    mysqli_set_charset($conn, "utf8");
         $sql = "SELECT * FROM etterem WHERE ID = $ID";
             $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()) 
@@ -99,8 +99,8 @@ if (isset($_GET['f'])) {
             echo "  
                 
             <script type='text/javascript'>
-            if(confirm('A foglalás sikertelen volt! Az étterem az adott időpontban már foglalt. Kérünk válassz másik időpontot!')) document.location = 'etterem?eid=$etteremID';
-            else(document.location = 'etterem?eid=$etteremID')
+            if(confirm('A foglalás sikertelen volt! A fogadó az adott időpontban már foglalt. Kérünk válassz másik időpontot!')) document.location = 'fogado?eid=$etteremID';
+            else(document.location = 'fogado?eid=$etteremID')
         </script> ";
         }
     }
@@ -123,7 +123,7 @@ if (isset($_GET['f'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="css/reszletek.css">
+    <link rel="stylesheet" href="../css/reszletek.css">
 
     <title>Loadeat • Étterem</title>
 </head>
@@ -139,12 +139,12 @@ if (isset($_GET['f'])) {
                         <h1 class="home-title" id="etteremNev"><?php echo "$etteremnev";?></h1>
                         <div class="home-description">
                             <div class="home-box">
-                                <img src="img/location.svg" alt="location" class="home-data-icon">
+                                <img src="../img/location.svg" alt="location" class="home-data-icon">
                                 <p class="home-data-p" id="etteremCime"><?php echo "$telepules, $cim ($orszag)";?></p>
                             </div>
 
                             <div class="home-box">
-                                <img src="img/mail.svg" alt="mail" class="home-data-icon">
+                                <img src="../img/mail.svg" alt="mail" class="home-data-icon">
                                 <p class="home-data-p" id="etteremEmail">Kapcsolatfelvétel a Loadeat oldalán keresztül lehetséges
                                 </p>
                             </div>
@@ -167,7 +167,7 @@ if (isset($_GET['f'])) {
                                         echo "
                                         <div class='swiper-slide'>
                                         <div class='card-contents'>
-                                            <img src='files/$etteremkepek[$index]' />
+                                            <img src='../files/$etteremkepek[$index]' />
                                             <div class='card-description'>
                                             </div>
                                         </div>
@@ -187,23 +187,23 @@ if (isset($_GET['f'])) {
                         </div>
     
                         <div class="home-section-container-fullscreen container">
-                            <h2 class="home-section-container-title">Tudnivalók az étteremről:</h2>
+                            <h2 class="home-section-container-title">Tudnivalók a fogadóról:</h2>
                             <p class="home-section-container-description" id="etteremLeiras"><?php echo "$etteremleiras";?></p>
                             <h2 class="home-section-container-title">Fizetési lehetőségek:</h1>
                                 <ul class="home-section-container-ul">
                                     <?php
 
                                     if ($helykeszpenz == 1) {
-                                        echo "<li class='home-section-container-list'><img src='img/wallet.svg' alt='wallet'
+                                        echo "<li class='home-section-container-list'><img src='../img/wallet.svg' alt='wallet'
                                             class='home-section-container-icon'> Helyszíni készpénzes fizetés</li>";
                                     }
                                     if ($helykartya == 1) {
-                                        echo "<li class='home-section-container-list'><img src='img/pay.svg' alt='pay'
+                                        echo "<li class='home-section-container-list'><img src='../img/pay.svg' alt='pay'
                                             class='home-section-container-icon'> Helyszíni bankkártyás fizetés</li>";
                                     }
 
                                     ?>
-                                    <li class="home-section-container-list"><img src="img/online-pay.svg"
+                                    <li class="home-section-container-list"><img src="../img/online-pay.svg"
                                             alt="online payment" class="home-section-container-icon"> Online Fizetés</li>
                                 </ul>
 
@@ -224,7 +224,7 @@ if (isset($_GET['f'])) {
         
             <div class="home-container grid">
                 <?php 
-                echo "<img src='files/$etteremkepek[0]' alt='etterem' class='home-img etteremKepek'>";
+                echo "<img src='../files/$etteremkepek[0]' alt='etterem' class='home-img etteremKepek'>";
                  ?>
                 
                 <div class="home-data-container container">
@@ -232,12 +232,12 @@ if (isset($_GET['f'])) {
                         <h1 class="home-title" id="etteremNev"><?php echo "$etteremnev";?></h1>
                         <div class="home-description">
                             <div class="home-box">
-                                <img src="img/location.svg" alt="location" class="home-data-icon">
+                                <img src="../img/location.svg" alt="location" class="home-data-icon">
                                 <p class="home-data-p" id="etteremCime"><?php echo "$telepules, $cim ($orszag)";?></p>
                             </div>
 
                             <div class="home-box">
-                                <img src="img/mail.svg" alt="mail" class="home-data-icon">
+                                <img src="../img/mail.svg" alt="mail" class="home-data-icon">
                                 <p class="home-data-p" id="etteremEmail">Kapcsolatfelvétel a Loadeat oldalán keresztül lehetséges
                                 </p>
                             </div>
@@ -247,23 +247,23 @@ if (isset($_GET['f'])) {
 
                 <div class="home-section-container container">
                     <!-- <div class="home-section-container-hr"></div> -->
-                    <h2 class="home-section-container-title">Tudnivalók az éttermről:</h2>
+                    <h2 class="home-section-container-title">Tudnivalók a fogadóról:</h2>
                     <p class="home-section-container-description" id="etteremLeiras"><?php echo "$etteremleiras";?></p>
                     <h2 class="home-section-container-title">Fizetési lehetőségek:</h1>
                         <ul class="home-section-container-ul">
                             <?php
 
                                     if ($helykeszpenz == 1) {
-                                        echo "<li class='home-section-container-list'><img src='img/wallet.svg' alt='wallet'
+                                        echo "<li class='home-section-container-list'><img src='../img/wallet.svg' alt='wallet'
                                             class='home-section-container-icon'> Helyszíni készpénzes fizetés</li>";
                                     }
                                     if ($helykartya == 1) {
-                                        echo "<li class='home-section-container-list'><img src='img/pay.svg' alt='pay'
+                                        echo "<li class='home-section-container-list'><img src='../img/pay.svg' alt='pay'
                                             class='home-section-container-icon'> Helyszíni bankkártyás fizetés</li>";
                                     }
 
                                     ?>
-                            <li class="home-section-container-list"><img src="img/online-pay.svg"
+                            <li class="home-section-container-list"><img src="../img/online-pay.svg"
                                     alt="online payment" class="home-section-container-icon"> Online</li>
                         </ul>
                         <button class="button foglalasBtn" id="foglalasBtn" onclick="showPopup()">Foglalás</button>
@@ -300,7 +300,7 @@ if (isset($_GET['f'])) {
                                         echo "
                                         <div class='swiper-slide'>
                                         <div class='card-contents'>
-                                            <img src='files/$menu_1_kepek[$index]'  class='swiper-image'/>
+                                            <img src='../files/$menu_1_kepek[$index]'  class='swiper-image'/>
                                             <div class='card-description'>
                                             </div>
                                         </div>
@@ -368,7 +368,7 @@ if (isset($_GET['f'])) {
                                         echo "
                                         <div class='swiper-slide'>
                                         <div class='card-contents'>
-                                            <img src='files/$menu_2_kepek[$index]' class='swiper-image'/>
+                                            <img src='../files/$menu_2_kepek[$index]' class='swiper-image'/>
                                             <div class='card-description'>
                                             </div>
                                         </div>
@@ -435,7 +435,7 @@ if (isset($_GET['f'])) {
                                         echo "
                                         <div class='swiper-slide'>
                                         <div class='card-contents'>
-                                            <img src='files/$menu_3_kepek[$index]' class='swiper-image'/>
+                                            <img src='../files/$menu_3_kepek[$index]' class='swiper-image'/>
                                             <div class='card-description'>
                                             </div>
                                         </div>
@@ -578,7 +578,7 @@ if (isset($_GET['f'])) {
         <section class="foglalt">
             <div class="fog_conn">
                 <h2>Foglaltsági táblázat</h2>
-                <p>Válassz ki egy dátumot a lentiekben és nézd meg, hogy vajon az adott napon melyik időpontokban foglalt a megadott lakásétterem. A dátum kiválasztása után nyomj a megtekintés gombara. Ezt követően rendszerünk ki fogja írni melyik időpontak a foglaltak. Ha nincs az adott napon foglalt időpont, akkor azt fogja írni, hogy "Nem található az adott napon aktív foglalás!".</p>
+                <p>Válassz ki egy dátumot a lentiekben és nézd meg, hogy vajon az adott napon melyik időpontokban foglalt a megadott fogadó. A dátum kiválasztása után nyomj a megtekintés gombara. Ezt követően rendszerünk ki fogja írni melyik időpontak a foglaltak. Ha nincs az adott napon foglalt időpont, akkor azt fogja írni, hogy "Nem található az adott napon aktív foglalás!".</p>
                 <form action="php/etteremdatum.php" method="POST">
                     <label for="datum">Válassz dátumot</label>
                     <input type="date" name="datum" required>
@@ -652,7 +652,7 @@ if (isset($_GET['f'])) {
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--=============== MAIN JS ===============-->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

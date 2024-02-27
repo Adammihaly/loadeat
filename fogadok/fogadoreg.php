@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/etterem_hozzaadas.css">
+    <link rel="stylesheet" href="../css/etterem_hozzaadas.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
     <title>Loadeat • Étterem hozzáadás</title>
 </head>
@@ -36,7 +36,7 @@ if (isset($_GET['error'])) {
 ?>
 
 
-    <h1>Étterem hozzáadása  (<span id="oldal_szam">1</span>/5)</h1>
+    <h1>Fogadó hozzáadása  (<span id="oldal_szam">1</span>/5)</h1>
 
     <form id="form" method="POST" action="php/addrestoran.php"  onsubmit="return validateForm()" enctype="multipart/form-data">
         <section id="1">
@@ -68,17 +68,17 @@ if (isset($_GET['error'])) {
             </div>
         </section>
         <section id="2">
-            <h2>A lakásétterem adatai</h2>
+            <h2>A Fogadó adatai</h2>
             <div class="input_field">
-                <p>Az étterem neve <span style="color: red;"> *</span></p>
+                <p>A fogadó neve <span style="color: red;"> *</span></p>
                 <input type="text" id="etterem_nev" name="etteremnev" placeholder="Név" required>
             </div>
             <div class="input_field">
-                <p>Az étterem országa <span style="color: red;"> *</span></p>
+                <p>A fogadó országa <span style="color: red;"> *</span></p>
                 <input type="text" id="etterem_orszag" name="orszag" placeholder="Pl: Magyarország" required>
             </div>
             <div class="input_field">
-                <p>Az étterem településének a neve <span style="color: red;"> *</span></p>
+                <p>A fogadó településének a neve <span style="color: red;"> *</span></p>
                 <input type="text" id="etterem_telepules" name="telepules" placeholder="Pl: Eger" required>
             </div>
             <div class="input_field">
@@ -86,22 +86,22 @@ if (isset($_GET['error'])) {
                 <input type="text" id="etterem_utca" name="utcahazszam" placeholder="Pl: Petőfi Sándor 12." required>
             </div>
             <div class="checkbox_field">
-                <p>Fizetési lehetőségek az ön étterme esetében <span style="color: red;"> *</span></p>
+                <p>Fizetési lehetőségek az ön fogadója esetében <span style="color: red;"> *</span></p>
                 <div class="container">
                 <input type="checkbox" id="fizetes_készpénz" name="keszpenz">
                 <label for="fizetes_készpénz">Helyszini készpénzes fizetés<br></label>
                 <input type="checkbox" id="fizetes_kartya" name="kartya">
                 <label for="fizetes_kartya">Helyszini kártyás fizetés</label>
-                <i><strong>Mi a helyzet az Online fizetéssel?</strong><br>Az Online fizetést NEM lehet kikapcsolni, tehát ez a funkció autómatikusan be van aktiválva minden lakásétterem részére. Amennyiben ez önnek problémát okoz, kérjük keresse fel ügyfélszolgálatunk.</i>
+                <i><strong>Mi a helyzet az Online fizetéssel?</strong><br>Az Online fizetést NEM lehet kikapcsolni, tehát ez a funkció autómatikusan be van aktiválva minden fogadó részére. Amennyiben ez önnek problémát okoz, kérjük keresse fel ügyfélszolgálatunk.</i>
                 </div>
             </div>
             <div class="kep_field">
-                <p>Képek az étteremről (maximum 5 darab) <span style="color: red;"> *</span></p>
+                <p>Képek a fogadóról (maximum 5 darab) <span style="color: red;"> *</span></p>
                 <input type="file"  name="kepek[]" id="etterem_kepek" accept=".jpg, .jpeg, .png, .webp" multiple="multiple" required>
             </div>
             <div class="input_field">
-                <p>Étterem leírása <span style="color: red;"> *</span></p>
-                <textarea id="etterem_leiras" name="bemutatas" rows="5" cols="50" placeholder="Étterem leírasa..." required></textarea>
+                <p>Fogadó leírása <span style="color: red;"> *</span></p>
+                <textarea id="etterem_leiras" name="bemutatas" rows="5" cols="50" placeholder="Fogadó leírasa..." required></textarea>
             </div>
         </section>
         <section id="3">
@@ -121,7 +121,7 @@ if (isset($_GET['error'])) {
                 <input type="number" id="elsomenu_forint" name="elsomenuarhuf" placeholder="X Ft." required>
                 <p>Menü ára dinárban (RSD) <span style="color: red;"> *</span></p>
                 <input type="number" id="elsomenu_dinar" name="elsomenuarrsd" placeholder="X RSD" required>
-                <i><strong>FONTOS!</strong><br>Az étterem tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
+                <i><strong>FONTOS!</strong><br>A fogadó tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
             </div>   
             <div class="kep_field">
                 <p>Képek a menüről (maximum 5 darab) <span style="color: red;"> *</span></p>
@@ -145,7 +145,7 @@ if (isset($_GET['error'])) {
                 <input type="number" id="masodikmenu_forint" name="masodikmenuarhuf" placeholder="X Ft.">
                 <p>Menü ára dinárban (RSD)</p>
                 <input type="number" id="masodikmenu_dinar" name="masodikmenuarrsd" placeholder="X RSD">
-                <i><strong>FONTOS!</strong><br>Az étterem tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
+                <i><strong>FONTOS!</strong><br>A fogadó tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
             </div>   
             <div class="kep_field">
                 <p>Képek a menüről (maximum 5 darab)</p>
@@ -169,7 +169,7 @@ if (isset($_GET['error'])) {
                 <input type="number" id=" harmadikmenu_forint" name="harmadikmenuarhuf" placeholder="X Ft.">
                 <p>Menü ára dinárban (RSD)</p>
                 <input type="number" id=" harmadikmenu_dinar" name= "harmadikmenuarrsd" placeholder="X RSD">
-                <i><strong>FONTOS!</strong><br>Az étterem tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
+                <i><strong>FONTOS!</strong><br>A fogadó tulajdonos dolga beleszámolni az árakba azt a 12%-os díjat, amit az oldal minden foglalás azaz étkezés után felszámít. Online fizetés esetében ez automatikusan levónodik, míg helyszini fizetés esetén utólagos számlát küldünk ki erről az összegről.</i>
             </div>   
             <div class="kep_field">
                 <p>Képek a menüről (maximum 5 darab) </p>
@@ -187,6 +187,6 @@ if (isset($_GET['error'])) {
     </form>
  
     <a href="kezelopultt">Kilépés</a>
-    <script src="js/fogadok_hozzaadasa.js"></script>
+    <script src="../js/fogadok_hozzaadasa.js"></script>
 </body>
 </html>
