@@ -2,6 +2,7 @@
 
 
 require_once 'conn.php';
+mysqli_set_charset($conn, "utf8");
 
  use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;

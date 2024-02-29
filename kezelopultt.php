@@ -146,7 +146,7 @@ if (isset($_GET['error'])) {
 	<?php
 
 	require_once 'php/conn.php';
-
+	mysqli_set_charset($conn, "utf8");
 	$sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
 		$result = $conn->query($sql);
 	while ($row = $result->fetch_assoc()) {
