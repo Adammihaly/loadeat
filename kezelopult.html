@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/kezelopult.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside>
+        <img src="img/logo.webp" alt="">
+        <h2>Hello, <label id="nev">alex21</label></h2>
+        <ol>
+            <p id="kezelopult_gomb"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
+            <p id="foglalasok_gomb"><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
+            <p id="elozmenyek_gomb"><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
+            <p id="etterem_hozzaadasa_gomb"><i class="fa-solid fa-plus"></i>Étterem hozzáadása</p>
+            <p id="etterem_szerkesztese"><i class="fa-solid fa-gear"></i>Étterem szerkesztése</p>
+        </ol>
+        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
+    </aside>
+    <main>
+        <nav>
+            <a href="index.php"><i class="fa-solid fa-house"></i>Kezdőlap</a>
+            <form class="search_wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </form>
+        </nav>
+        <section class="kezelopult">
+            <div class="szoveg_wrapper">
+                <h1>Üdv a kezelőpultban <label id="nev">alex21</label></h1>
+                <h2>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distrib</h2>    
+            </div>
+            <div class="gomb_wrap">
+                <a href="">Étterem regisztrálása</a>
+                <p>Köszönjük a regisztrációt </p>
+            </div>
+        </section>
+        <section class="foglalasok">
+            <div class="szoveg_wrapper">
+                <h1>Aktív foglalások <i class="fa-solid fa-calendar-check"></i></h1>
+                <h2>A lentiekben találhatók a jelenleg is aktív foglalások. Egy adott foglalás a helyszini étkezést követően átmegy a foglalási Előzmények részre. Foglalások esetén a lefelé mutató nyilra kattintva lehet látni a foglalás részleteit.</h2>    
+            </div>
+
+            <div class="nincs_foglalas">
+                <i class="fa-solid fa-store-slash"></i>
+                <h2>Nincsennek aktív foglalások... még</h2>
+            </div>
+
+            <div class="foglalas_wrapper">
+                <div class="details">
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-thumbtack"></i>
+                        <p>A Pajta Lakásétterem</p>
+                    </div>
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Szeged</p>
+                    </div>
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>2024.03.09</p>
+                        <p>15:30 - 17:00</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angles-down" id="see_more"></i>
+                <table>
+                    <tr>
+                      <th colspan="2">Rendelés</th>
+                    </tr>
+                    <tr>
+                      <td>Egyén</td>
+                      <td>
+                        <p>Menü 1: <span >2x</span></p>
+                        <p>Menü 2: <span >1x</span></p>
+                        <p>Menü 3: <span >3x</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Fizetési mód:</td>
+                      <td>Helyszíni kézpénzes fizetés</td>
+                    </tr>
+                    <tr>
+                      <td>Végösszeg:</td>
+                      <td>1500 rsd</td>
+                    </tr>
+                    <tr>
+                      <td>Foglalás azonosító:</td>
+                      <td>800642</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2">Ügyfél adatok</th>
+                    </tr>
+                    <tr>
+                      <td>Név:</td>
+                      <td>Egyip Tomi</td>
+                    </tr>
+                    <tr>
+                      <td>Dátum:</td>
+                      <td>2024-03-02</td> </tr>
+                    <tr>
+                      <td>Tel:</td>
+                      <td>+3654123</td>
+                    </tr>
+                    <tr>
+                      <td>Vendégek:</td>
+                      <td>3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="foglalas_wrapper">
+                <div class="details">
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-thumbtack"></i>
+                        <p>A Pajta Lakásétterem</p>
+                    </div>
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Szeged</p>
+                    </div>
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>2024.03.09</p>
+                        <p>15:30 - 17:00</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angles-down" id="see_more"></i>
+                <table>
+                    <tr>
+                      <th colspan="2">Rendelés</th>
+                    </tr>
+                    <tr>
+                      <td>Egyén</td>
+                      <td>
+                        <p>Menü 1: <span >2x</span></p>
+                        <p>Menü 2: <span >1x</span></p>
+                        <p>Menü 3: <span >3x</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Fizetési mód:</td>
+                      <td>Helyszíni kézpénzes fizetés</td>
+                    </tr>
+                    <tr>
+                      <td>Végösszeg:</td>
+                      <td>1500 rsd</td>
+                    </tr>
+                    <tr>
+                      <td>Foglalás azonosító:</td>
+                      <td>800642</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2">Ügyfél adatok</th>
+                    </tr>
+                    <tr>
+                      <td>Név:</td>
+                      <td>Egyip Tomi</td>
+                    </tr>
+                    <tr>
+                      <td>Dátum:</td>
+                      <td>2024-03-02</td> </tr>
+                    <tr>
+                      <td>Tel:</td>
+                      <td>+3654123</td>
+                    </tr>
+                    <tr>
+                      <td>Vendégek:</td>
+                      <td>3</td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+        <section class="elozmenyek">
+            <div class="szoveg_wrapper">
+                <h1>Foglalási előzmények <i class="fa-solid fa-hourglass-half"></i></h1>
+                <h2>A lentiekben találhatók a múltban történt foglalások, melyek esetében az étkezés már megtörtént. Ha már vannak előzmények, akkor a kis nyilra kattintva lehet részleteket olvasni.</h2>    
+            </div>
+            <div class="nincs_foglalas">
+                <i class="fa-solid fa-store-slash"></i>
+                <h2>Nincsennek előzmények... még</h2>
+            </div>
+            <!-- <div class="foglalas_wrapper">
+                <div class="details">
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-thumbtack"></i>
+                        <p>A Pajta Lakásétterem</p>
+                    </div>
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Szeged</p>
+                    </div>
+                    <div class="iconwrap">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>2024.03.09</p>
+                        <p>15:30 - 17:00</p>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angles-down" id="see_more"></i>
+                <table>
+                    <tr>
+                      <th colspan="2">Rendelés</th>
+                    </tr>
+                    <tr>
+                      <td>Egyén</td>
+                      <td>
+                        <p>Menü 1: <span >2x</span></p>
+                        <p>Menü 2: <span >1x</span></p>
+                        <p>Menü 3: <span >3x</span></p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Fizetési mód:</td>
+                      <td>Helyszíni kézpénzes fizetés</td>
+                    </tr>
+                    <tr>
+                      <td>Végösszeg:</td>
+                      <td>1500 rsd</td>
+                    </tr>
+                    <tr>
+                      <td>Foglalás azonosító:</td>
+                      <td>800642</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2">Ügyfél adatok</th>
+                    </tr>
+                    <tr>
+                      <td>Név:</td>
+                      <td>Egyip Tomi</td>
+                    </tr>
+                    <tr>
+                      <td>Dátum:</td>
+                      <td>2024-03-02</td> </tr>
+                    <tr>
+                      <td>Tel:</td>
+                      <td>+3654123</td>
+                    </tr>
+                    <tr>
+                      <td>Vendégek:</td>
+                      <td>3</td>
+                    </tr>
+                </table>
+            </div> -->
+        </section>
+    </main>
+    
+
+    <script src="js/kezelopult.js"></script>
+</body>
+</html>
