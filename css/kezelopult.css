@@ -350,7 +350,7 @@ main
 
         & h2,label,a
         {
-            font-size: 1rem;
+            font-size: 2vh;
         }
 
         & h2,label
@@ -360,8 +360,10 @@ main
 
         & ol
         {
-            font-size: .7rem;
+            font-size: 1.5vh;
             align-items: center;
+            word-break: keep-all;
+            white-space: nowrap;
 
         }
 
@@ -392,7 +394,7 @@ main
 
             .fa-solid
             {
-                font-size: 1.5rem;
+                font-size: 3vh;
                 z-index: 1000;
             }
         }
@@ -403,12 +405,12 @@ main
     
             & h1, label
             {
-                font-size: 1.5rem;
+                font-size: 3vh;
             }
     
             & h2
             {
-                font-size: .7rem;
+                font-size: 1.5vh;
                 text-align: center;
                 width: 80%;
             }
@@ -432,19 +434,19 @@ main
     
                     .iconwrap
                     {        
-                        font-size: .8rem;
+                        font-size:1.5vh;
                     }
                 }
     
                 #see_more
                 {
                     margin-top: 1em;
-                    font-size: 1rem;    
+                    font-size: 2vh;    
                 }
 
                 
                 table {
-                    font-size: .7rem;
+                    font-size: 1.5vh;
                   }
             }
         }
@@ -455,12 +457,12 @@ main
             {
                 padding: 1vh;
                 border-radius: .5vh;
-                font-size:1rem;
+                font-size:2vh;
             }
     
             & p
             {
-                font-size: .8rem;
+                font-size: 1.5vh;
             }
     
             .gomb_wrap
@@ -481,13 +483,13 @@ main
                 .fa-solid
                 {
                     margin-top: .5em;
-                    font-size: 5rem;
+                    font-size: 10vh;
                 }
     
                 & h2
                 {
                     margin-top: 1em;
-                    font-size: 1rem;
+                    font-size: 1.5vh;
                 }
             }
         }
