@@ -306,10 +306,29 @@ main
     {
         position: relative;
         margin-bottom: 10vh;
+        display: flex;
+        align-items: center;
+        
+        & div
+        {
+            width: 30%;
+            height: 40vh;
+            flex-grow: 1;
+            flex-basis: 1;
+            flex-shrink: 0;
+            display: flex;
+            justify-content:flex-start;
+
+            & p
+            {
+                font-size: 1.2vw;
+                text-align: center;
+            }
+        }
 
         & img
         {
-            width: 40%;
+            width: 30%;
             aspect-ratio: 1;
         }
 
@@ -334,6 +353,7 @@ main
         {
             scale:1.1;
         }
+
     }
 
     .cim
@@ -609,7 +629,7 @@ footer
 
                 & p
                 {
-                    font-size: 1.2vh;
+                    font-size: 1.4vh;
                 }
 
                 & a
@@ -641,6 +661,23 @@ footer
 
         .fogado_leiras
         {
+            & div
+            {
+                width: fit-content;
+                height: fit-content;
+                flex-grow: 1;
+                flex-basis: 1;
+                flex-shrink: 0;
+                display: flex;
+                justify-content:flex-start;
+    
+                & p
+                {
+                    font-size: 1.45vh;
+                    text-align: center;
+                }
+            }
+    
             & img
             {
                 width: 30%;
