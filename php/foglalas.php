@@ -218,17 +218,17 @@ else
 
 
 if ($lang == '') {    
-   header("Location: https://loadeat.com?fo=true");
+   header("Location: https://loadeat.com/lakasetterem?fo=true");
    exit();
    }
    else if($lang == 'en')
    {
-      header("Location: https://loadeat.com/en?fo=true");
+      header("Location: https://loadeat.com/en/lakasetterem?fo=true");
       exit();
    }
    else if($lang == 'rs')
    {
-      header("Location: https://loadeat.com/rs?fo=true");
+      header("Location: https://loadeat.com/rs/lakasetterem?fo=true");
       exit();
    }
 

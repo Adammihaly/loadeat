@@ -6,38 +6,130 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/kezelopult.css">
-    <title>Document</title>
+    <title>Loadeat • Kezelőpult</title>
 </head>
 <body>
+
+<?php
+
+session_start();
+if(!isset($_SESSION['ID']))
+{
+    header("Location: bejelentkezes");
+    exit();
+}
+else
+{
+    $ProfilID = $_SESSION['ID'];
+    $Felhasznalonev = $_SESSION['Felhasznalonev'];
+}
+
+
+
+if (isset($_GET['error'])) {
+        if ($_GET['error'] == "none") {
+            echo "  
+                
+            <script type='text/javascript'>
+            if(confirm('Az étterem sikeresen közzé lett téve!')) document.location = 'kezelopultt';
+            else(document.location = 'kezelopultt')
+        </script> ";
+        }
+    }
+
+
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == "noneed") {
+            echo "  
+                
+            <script type='text/javascript'>
+            if(confirm('Az étterem sikeresen módosítva lett!')) document.location = 'kezelopultt';
+            else(document.location = 'kezelopultt')
+        </script> ";
+        }
+    }
+
+    require_once 'php/conn.php';
+
+?>
+
+
     <aside>
-        <img src="img/logo.webp" alt="">
-        <h2>Hello, <label id="nev">alex21</label></h2>
+        <img src="img/logo.webp" alt="logo">
+        <h2>Hello, <label id="nev"><?php echo $Felhasznalonev; ?></label></h2>
         <ol>
             <p id="kezelopult_gomb"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
             <p id="foglalasok_gomb"><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
             <p id="elozmenyek_gomb"><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
-            <p id="etterem_hozzaadasa_gomb"><i class="fa-solid fa-plus"></i>Étterem hozzáadása</p>
-            <p id="etterem_szerkesztese"><i class="fa-solid fa-gear"></i>Étterem szerkesztése</p>
+            <?php
+
+    
+    mysqli_set_charset($conn, "utf8");
+    $sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+        $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+
+        $vaneetterem = $row['etterem'];
+        $etteremID = $row['etteremID'];
+
+    if ($vaneetterem != 1) {
+        echo "<p id='etterem_hozzaadasa_gomb4'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+    }
+    else
+    {
+        echo "<p id='etterem_szerkesztese5'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+    }
+
+
+
+}
+
+    ?>
         </ol>
-        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
+        <a href="php/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
     </aside>
     <aside class="telefonos_menu">
-      <h2>Hello, <label id="nev">alex21</label></h2>
+      <h2>Hello, <label id="nev"><?php echo $Felhasznalonev; ?></label></h2>
       <ol>
           <p id="kezelopult_gomb1"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
           <p id="foglalasok_gomb2"><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
           <p id="elozmenyek_gomb3"><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
-          <p id="etterem_hozzaadasa_gomb4"><i class="fa-solid fa-plus"></i>Étterem hozzáadása</p>
-          <p id="etterem_szerkesztese5"><i class="fa-solid fa-gear"></i>Étterem szerkesztése</p>
+
+<?php
+
+    
+    mysqli_set_charset($conn, "utf8");
+    $sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+        $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+
+        $vaneetterem = $row['etterem'];
+        $etteremID = $row['etteremID'];
+
+    if ($vaneetterem != 1) {
+        echo "<p id='etterem_hozzaadasa_gomb4'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+    }
+    else
+    {
+        echo "<p id='etterem_szerkesztese5'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+    }
+
+
+
+}
+
+    ?>
+          
+          
       </ol>
-      <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
+      <a href="php/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
     </aside>
     <main>
         <nav>
-            <a href="index.php"><i class="fa-solid fa-house"></i>Kezdőlap</a>
+            <a href="lakasetterem"><i class="fa-solid fa-house"></i>Kezdőlap</a>
             <form class="search_wrap">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="Keresés">
             </form>
         </nav>
         <nav class="telefonos">
@@ -46,11 +138,35 @@
         </nav>
         <section class="kezelopult">
             <div class="szoveg_wrapper">
-                <h1>Üdv a kezelőpultban <label id="nev">alex21</label></h1>
-                <h2>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distrib</h2>    
+                <h1>Üdv a kezelőpultban <label id="nev"><?php echo $Felhasznalonev; ?></label></h1>
+                <h2>"Fedezzd fel rendszerünk által kínált széleskörű lehetőségeket, hogy még több vendéget vonzz az étteremedbe! Az oldalunkon keresztül könnyedén népszerűsítheted szolgáltatásod és vonzó ajánlatokat kínálhatsz, így növelve az érdeklődést és az ügyfélbázist. Ne hagyd ki ezt a remek lehetőséget, és tedd éttermed a helyi gasztronómiai élet egyik kiemelkedő résztvevőjévé!</h2>    
             </div>
             <div class="gomb_wrap">
-                <a href="">Étterem regisztrálása</a>
+                    <?php
+
+    
+    mysqli_set_charset($conn, "utf8");
+    $sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+        $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+
+        $vaneetterem = $row['etterem'];
+        $etteremID = $row['etteremID'];
+
+    if ($vaneetterem != 1) {
+        echo "<a href='etteremreg'>Étterem regisztrálása</a>";
+    }
+    else
+    {
+        echo "<a href='etterem?eid=$etteremID'>Étterem előnézete</a>";
+    }
+
+
+
+}
+
+    ?>
+                
                 <p>Köszönjük a regisztrációt </p>
             </div>
         </section>
@@ -263,7 +379,7 @@
         </section>
     </main>
     
-
-    <script src="js/kezelopult.js"></script>
+<script src="js/kezelopult.js"></script>
+    
 </body>
 </html>

@@ -273,15 +273,15 @@ else if ($lang == 'rs') {
 
 
 if ($lang == 'hu') {
-	header("location: ../kezelopultt") ;
+	header("location: ../kezelopult") ;
 		exit();
 }
 else if ($lang == 'en') {
-	header("location: ../en/kezelopultt") ;
+	header("location: ../en/kezelopult") ;
 		exit();
 }
 else if ($lang == 'rs') {
-	header("location: ../rs/kezelopultt") ;
+	header("location: ../rs/kezelopult") ;
 		exit();
 }
 	}
@@ -330,7 +330,7 @@ function szures($string) {
   foreach ($sql_szo_lista as $sql_szo) {
     if (stripos($string, $sql_szo) !== false) {
       
-      header("Location: https://loadeat.com?error=fwd");
+      header("Location: https://loadeat.com/lakasetterem?error=fwd");
       exit();
     }
   }
@@ -347,7 +347,7 @@ function vedelem($string)
   foreach ($sql_szo_lista as $sql_szo) {
     if (stripos($string, $sql_szo) !== false) {
       
-      header("Location: https://loadeat.com?error=fwd");
+      header("Location: https://loadeat.com/lakasetterem?error=fwd");
       exit();
     }
   }  

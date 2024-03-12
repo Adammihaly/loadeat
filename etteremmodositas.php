@@ -242,7 +242,7 @@ $sql = "SELECT * FROM etterem WHERE profID = $ProfilID";
 
     </form>
  
-    <a href="kezelopultt">Kilépés</a>
+    <a href="kezelopult">Kilépés</a>
     <script src="js/fogadok_hozzaadasa.js"></script>
 </body>
 </html>

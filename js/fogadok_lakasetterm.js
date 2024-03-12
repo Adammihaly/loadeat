@@ -1,7 +1,7 @@
 document.getElementById('fogadok').addEventListener('click', () =>{
-    window.location.href ='fogadok.html';
+    window.location.href ='fogadok/';
 })
 
 document.getElementById('lakasettermek').addEventListener('click', () => {
-    window.location.href = 'index.php';
+    window.location.href = 'lakasetterem';
 })

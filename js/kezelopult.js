@@ -40,10 +40,15 @@ const kezelopult_gomb1 = document.getElementById('kezelopult_gomb1');
 const foglalasok_gomb2 = document.getElementById('foglalasok_gomb2');
 const elozmenyek_gomb3 = document.getElementById('elozmenyek_gomb3');
 const etterem_hozzaadasa_gomb4 = document.getElementById('etterem_hozzaadasa_gomb4');
+const etterem_szerkesztese5 = document.getElementById('etterem_szerkesztese5');
 
 
 etterem_hozzaadasa_gomb4.addEventListener('click' , ()=>{
-  window.location.href = 'etteremreg.php'
+  window.location.href = 'etteremreg'
+})
+
+etterem_szerkesztese5.addEventListener('click' , ()=>{
+  window.location.href = 'etteremmodositas'
 })
 
 kezelopult_gomb1.addEventListener('click', () =>{
