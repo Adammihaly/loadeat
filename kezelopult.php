@@ -73,11 +73,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb4'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
     }
     else
     {
-        echo "<p id='etterem_szerkesztese5'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+        echo "<p id='etterem_szerkesztese'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
     }
 
 
@@ -175,12 +175,10 @@ if (isset($_GET['error'])) {
                 <h1>Aktív foglalások <i class="fa-solid fa-calendar-check"></i></h1>
                 <h2>A lentiekben találhatók a jelenleg is aktív foglalások. Egy adott foglalás a helyszini étkezést követően átmegy a foglalási Előzmények részre. Foglalások esetén a lefelé mutató nyilra kattintva lehet látni a foglalás részleteit.</h2>    
             </div>
-
             <div class="nincs_foglalas">
                 <i class="fa-solid fa-store-slash"></i>
                 <h2>Nincsennek aktív foglalások... még</h2>
             </div>
-
             <div class="foglalas_wrapper">
                 <div class="details">
                     <div class="iconwrap">

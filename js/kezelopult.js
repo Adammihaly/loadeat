@@ -12,28 +12,33 @@ const kezelopult_gomb = document.getElementById('kezelopult_gomb');
 const foglalasok_gomb = document.getElementById('foglalasok_gomb');
 const elozmenyek_gomb = document.getElementById('elozmenyek_gomb');
 const etterem_hozzaadasa_gomb = document.getElementById('etterem_hozzaadasa_gomb');
+const etterem_szerkesztese = document.getElementById('etterem_szerkesztese');
 
 
 etterem_hozzaadasa_gomb.addEventListener('click' , ()=>{
   window.location.href = 'etteremreg.php'
 })
 
+etterem_szerkesztese.addEventListener('click',()=>{
+  window.location.href = 'etteremmodositas.php'
+})
+
 kezelopult_gomb.addEventListener('click', () =>{
   kezelopult.style.display = 'flex';
-  foglalasok.style.display = 'none'
-  elozmenyek.style.display = 'none'
+  foglalasok.style.display = 'none';
+  elozmenyek.style.display = 'none';
 })
 
 elozmenyek_gomb.addEventListener('click', () =>{
   kezelopult.style.display = 'none';
-  foglalasok.style.display = 'none'
-  elozmenyek.style.display = 'flex'
+  foglalasok.style.display = 'none';
+  elozmenyek.style.display = 'flex';
 })
 
 foglalasok_gomb.addEventListener('click', () =>{
   kezelopult.style.display = 'none';
-  foglalasok.style.display = 'flex'
-  elozmenyek.style.display = 'none'
+  foglalasok.style.display = 'flex';
+  elozmenyek.style.display = 'none';
 })
 
 const kezelopult_gomb1 = document.getElementById('kezelopult_gomb1');
@@ -44,11 +49,11 @@ const etterem_szerkesztese5 = document.getElementById('etterem_szerkesztese5');
 
 
 etterem_hozzaadasa_gomb4.addEventListener('click' , ()=>{
-  window.location.href = 'etteremreg'
+  window.location.href = 'etteremreg.php'
 })
 
 etterem_szerkesztese5.addEventListener('click' , ()=>{
-  window.location.href = 'etteremmodositas'
+  window.location.href = 'etteremmodositas.php'
 })
 
 kezelopult_gomb1.addEventListener('click', () =>{
