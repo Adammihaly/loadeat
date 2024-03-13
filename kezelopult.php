@@ -58,9 +58,9 @@ if (isset($_GET['error'])) {
         <img src="img/logo.webp" alt="logo">
         <h2>Hello, <label id="nev"><?php echo $Felhasznalonev; ?></label></h2>
         <ol>
-            <p id="kezelopult_gomb"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
-            <p id="foglalasok_gomb"><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
-            <p id="elozmenyek_gomb"><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
+            <p id="kezelopult_gomb" onclick="kezelopultgomb()"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
+            <p id="foglalasok_gomb" onclick="foglalasokgomb()" ><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
+            <p id="elozmenyek_gomb" onclick="elozmenyekgomb()" ><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
             <?php
 
     
@@ -73,11 +73,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
     }
     else
     {
-        echo "<p id='etterem_szerkesztese'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()''><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
     }
 
 
@@ -91,9 +91,9 @@ if (isset($_GET['error'])) {
     <aside class="telefonos_menu">
       <h2>Hello, <label id="nev"><?php echo $Felhasznalonev; ?></label></h2>
       <ol>
-          <p id="kezelopult_gomb1"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
-          <p id="foglalasok_gomb2"><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
-          <p id="elozmenyek_gomb3"><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
+            <p id="kezelopult_gomb" onclick="kezelopultgomb()"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
+            <p id="foglalasok_gomb" onclick="foglalasokgomb()"><i class="fa-solid fa-calendar-check"></i>Aktív foglalások</p>
+            <p id="elozmenyek_gomb" onclick="elozmenyekgomb()"><i class="fa-solid fa-hourglass-half"></i>Foglalási előzmények</p>
 
 <?php
 
@@ -107,11 +107,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb4'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
     }
     else
     {
-        echo "<p id='etterem_szerkesztese5'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()''><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";    
     }
 
 
@@ -134,12 +134,12 @@ if (isset($_GET['error'])) {
         </nav>
         <nav class="telefonos">
           <img src="img/logo.webp" alt="">
-          <i class="fa-solid fa-bars" id="hamburger"></i>
+          <i class="fa-solid fa-bars" id="hamburger" onclick="hamburger()"></i>
         </nav>
         <section class="kezelopult">
             <div class="szoveg_wrapper">
                 <h1>Üdv a kezelőpultban <label id="nev"><?php echo $Felhasznalonev; ?></label></h1>
-                <h2>"Fedezzd fel rendszerünk által kínált széleskörű lehetőségeket, hogy még több vendéget vonzz az étteremedbe! Az oldalunkon keresztül könnyedén népszerűsítheted szolgáltatásod és vonzó ajánlatokat kínálhatsz, így növelve az érdeklődést és az ügyfélbázist. Ne hagyd ki ezt a remek lehetőséget, és tedd éttermed a helyi gasztronómiai élet egyik kiemelkedő résztvevőjévé!</h2>    
+                <h2>Fedezd fel rendszerünk által kínált széleskörű lehetőségeket, hogy még több vendéget vonzz az étteremedbe! Az oldalunkon keresztül könnyedén népszerűsítheted szolgáltatásod és vonzó ajánlatokat kínálhatsz, így növelve az érdeklődést és az ügyfélbázist. Ne hagyd ki ezt a remek lehetőséget, és tedd éttermed a helyi gasztronómiai élet egyik kiemelkedő résztvevőjévé!</h2>    
             </div>
             <div class="gomb_wrap">
                     <?php
@@ -175,10 +175,10 @@ if (isset($_GET['error'])) {
                 <h1>Aktív foglalások <i class="fa-solid fa-calendar-check"></i></h1>
                 <h2>A lentiekben találhatók a jelenleg is aktív foglalások. Egy adott foglalás a helyszini étkezést követően átmegy a foglalási Előzmények részre. Foglalások esetén a lefelé mutató nyilra kattintva lehet látni a foglalás részleteit.</h2>    
             </div>
-            <div class="nincs_foglalas">
+<!--             <div class="nincs_foglalas">
                 <i class="fa-solid fa-store-slash"></i>
                 <h2>Nincsennek aktív foglalások... még</h2>
-            </div>
+            </div> -->
             <div class="foglalas_wrapper">
                 <div class="details">
                     <div class="iconwrap">
@@ -195,7 +195,7 @@ if (isset($_GET['error'])) {
                         <p>15:30 - 17:00</p>
                     </div>
                 </div>
-                <i class="fa-solid fa-angles-down" id="see_more"></i>
+                <i class="fa-solid fa-angles-down" id="see_more" onclick="tablamegjelenit(0)"></i>
                 <table>
                     <tr>
                       <th colspan="2">Rendelés</th>
@@ -257,7 +257,7 @@ if (isset($_GET['error'])) {
                         <p>15:30 - 17:00</p>
                     </div>
                 </div>
-                <i class="fa-solid fa-angles-down" id="see_more"></i>
+                <i class="fa-solid fa-angles-down" id="see_more" onclick="tablamegjelenit(1)"></i>
                 <table>
                     <tr>
                       <th colspan="2">Rendelés</th>
@@ -302,6 +302,9 @@ if (isset($_GET['error'])) {
                     </tr>
                 </table>
             </div>
+
+
+
 
         </section>
         <section class="elozmenyek">

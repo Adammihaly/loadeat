@@ -15,31 +15,42 @@ const etterem_hozzaadasa_gomb = document.getElementById('etterem_hozzaadasa_gomb
 const etterem_szerkesztese = document.getElementById('etterem_szerkesztese');
 
 
-etterem_hozzaadasa_gomb.addEventListener('click' , ()=>{
-  window.location.href = 'etteremreg.php'
-})
 
-etterem_szerkesztese.addEventListener('click',()=>{
+
+function linketteremreg()
+{
+    window.location.href = 'etteremreg.php'
+}
+
+function linketteremmodositas()
+{
   window.location.href = 'etteremmodositas.php'
-})
+}
 
-kezelopult_gomb.addEventListener('click', () =>{
+function kezelopultgomb()
+{
+  console.log("fos")
   kezelopult.style.display = 'flex';
   foglalasok.style.display = 'none';
   elozmenyek.style.display = 'none';
-})
+}
 
-elozmenyek_gomb.addEventListener('click', () =>{
-  kezelopult.style.display = 'none';
+function elozmenyekgomb()
+{
+   kezelopult.style.display = 'none';
   foglalasok.style.display = 'none';
   elozmenyek.style.display = 'flex';
-})
 
-foglalasok_gomb.addEventListener('click', () =>{
-  kezelopult.style.display = 'none';
+}
+
+function foglalasokgomb()
+{
+   kezelopult.style.display = 'none';
   foglalasok.style.display = 'flex';
   elozmenyek.style.display = 'none';
-})
+
+}
+
 
 const kezelopult_gomb1 = document.getElementById('kezelopult_gomb1');
 const foglalasok_gomb2 = document.getElementById('foglalasok_gomb2');
@@ -56,51 +67,25 @@ etterem_szerkesztese5.addEventListener('click' , ()=>{
   window.location.href = 'etteremmodositas.php'
 })
 
-kezelopult_gomb1.addEventListener('click', () =>{
-  kezelopult.style.display = 'flex';
-  foglalasok.style.display = 'none'
-  elozmenyek.style.display = 'none'
-})
 
-elozmenyek_gomb3.addEventListener('click', () =>{
-  kezelopult.style.display = 'none';
-  foglalasok.style.display = 'none'
-  elozmenyek.style.display = 'flex'
-})
-
-foglalasok_gomb2.addEventListener('click', () =>{
-  kezelopult.style.display = 'none';
-  foglalasok.style.display = 'flex'
-  elozmenyek.style.display = 'none'
-})
-
-for (const seeMoreIcon of seeMoreIcons) {
-  seeMoreIcon.addEventListener('click', () => {
-    seeMoreIcon.classList.toggle('active');
-  });
-}
-
-if(elozmenyek_foglalasWrappers.length === 0)
+function tablamegjelenit(szam)
 {
-  elozmenyek_nincsFoglalas.style.display = 'flex';
+    seeMoreIcons[szam].classList.toggle('active');
   
 }
-else{
-  elozmenyek_nincsFoglalas.style.display = 'none'
+
+
+function SeeMore()
+{
+   seeMoreIcon.classList.toggle('active');
 }
 
-if(foglalas_foglalasWrappers.length === 0)
-{
-  foglalas_nincsFoglalas.style.display = 'flex';
-}
-else
-{
-  foglalas_nincsFoglalas.style.display = 'none';
-}
 
 var szam = 0;
-document.getElementById('hamburger').addEventListener('click',()=>{
-  if(szam===0)
+
+function hamburger()
+{
+    if(szam===0)
   {
     document.querySelector('.telefonos_menu').style.transform = 'translate(0)';
     szam++;
@@ -110,4 +95,4 @@ document.getElementById('hamburger').addEventListener('click',()=>{
     document.querySelector('.telefonos_menu').style.transform = 'translate(105%)';
     szam=0;
   }
-})
+}
