@@ -273,15 +273,15 @@ else if ($lang == 'rs') {
 
 
 if ($lang == 'hu') {
-	header("location: ../kezelopultt") ;
+	header("location: ../kezelopult") ;
 		exit();
 }
 else if ($lang == 'en') {
-	header("location: ../en/kezelopultt") ;
+	header("location: ../en/kezelopult") ;
 		exit();
 }
 else if ($lang == 'rs') {
-	header("location: ../rs/kezelopultt") ;
+	header("location: ../rs/kezelopult") ;
 		exit();
 }
 	}

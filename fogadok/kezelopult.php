@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/20993e564e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/kezelopult.css">
+    <link rel="stylesheet" href="../css/kezelopult.css">
     <title>Loadeat • Kezelőpult</title>
 </head>
 <body>
@@ -55,7 +55,7 @@ if (isset($_GET['error'])) {
 
 
     <aside>
-        <img src="img/logo.webp" alt="logo">
+        <img src="../img/logo.webp" alt="logo">
         <h2>Hello, <label id="nev"><?php echo $Felhasznalonev; ?></label></h2>
         <ol>
             <p id="kezelopult_gomb" onclick="kezelopultgomb()"><i class="fa-solid fa-wrench"></i>Kezelőpult</p>
@@ -86,7 +86,7 @@ if (isset($_GET['error'])) {
 
     ?>
         </ol>
-        <a href="php/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
+        <a href="../php/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>Kilép</a>
     </aside>
     <aside class="telefonos_menu">
       <h2>Hello, <label id="nev"><?php echo $Felhasznalonev; ?></label></h2>
@@ -562,7 +562,7 @@ if ($nincsetterem != 1) {
         </section>
     </main>
     
-<script src="js/kezelopult.js"></script>
+<script src="./js/kezelopult.js"></script>
     
 </body>
 </html>
