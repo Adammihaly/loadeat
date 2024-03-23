@@ -31,7 +31,7 @@ if (isset($_GET['error'])) {
             echo "  
                 
             <script type='text/javascript'>
-            if(confirm('Az étterem sikeresen közzé lett téve!')) document.location = 'kezelopult';
+            if(confirm('A fogadó sikeresen közzé lett téve!')) document.location = 'kezelopult';
             else(document.location = 'kezelopult')
         </script> ";
         }
@@ -43,13 +43,29 @@ if (isset($_GET['error'])) {
             echo "  
                 
             <script type='text/javascript'>
-            if(confirm('Az étterem sikeresen módosítva lett!')) document.location = 'kezelopult';
+            if(confirm('A fogadó sikeresen módosítva lett!')) document.location = 'kezelopult';
             else(document.location = 'kezelopult')
         </script> ";
         }
     }
 
     require_once 'php/conn.php';
+
+    $sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+$result = $conn->query($sql);
+
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $type = $row['type'];
+        
+
+        if ($type != 'f') {
+            header("Location: bejelentkezes");
+            exit();
+        }
+
+    }
+}
 
 ?>
 
@@ -73,11 +89,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb' onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Fogadó hozzáadása</p>";
     }
     else
     {
-        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()''><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()''><i class='fa-solid fa-gear'></i>Fogadó szerkesztése</p>";
     }
 
 
@@ -107,7 +123,7 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb' onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
     }
     else
     {
@@ -126,7 +142,7 @@ if (isset($_GET['error'])) {
     </aside>
     <main>
         <nav>
-            <a href="lakasetterem"><i class="fa-solid fa-house"></i>Kezdőlap</a>
+            <a href="./"><i class="fa-solid fa-house"></i>Kezdőlap</a>
             <form class="search_wrap">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Keresés">
@@ -139,7 +155,7 @@ if (isset($_GET['error'])) {
         <section class="kezelopult">
             <div class="szoveg_wrapper">
                 <h1>Üdv a kezelőpultban <label id="nev"><?php echo $Felhasznalonev; ?></label></h1>
-                <h2>Fedezd fel rendszerünk által kínált széleskörű lehetőségeket, hogy még több vendéget vonzz az étteremedbe! Az oldalunkon keresztül könnyedén népszerűsítheted szolgáltatásod és vonzó ajánlatokat kínálhatsz, így növelve az érdeklődést és az ügyfélbázist. Ne hagyd ki ezt a remek lehetőséget, és tedd éttermed a helyi gasztronómiai élet egyik kiemelkedő résztvevőjévé!</h2>    
+                <h2>Fedezd fel rendszerünk által kínált széleskörű lehetőségeket, hogy még több vendéget vonzz a fogadódba! Az oldalunkon keresztül könnyedén népszerűsítheted szolgáltatásod és vonzó ajánlatokat kínálhatsz, így növelve az érdeklődést és az ügyfélbázist. Ne hagyd ki ezt a remek lehetőséget, és tedd fogadód a helyi gasztronómiai élet egyik kiemelkedő résztvevőjévé!</h2>    
             </div>
             <div class="gomb_wrap">
                     <?php
@@ -154,11 +170,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<a href='etteremreg'>Étterem regisztrálása</a>";
+        echo "<a href='fogadoreg'>Fogadó regisztrálása</a>";
     }
     else
     {
-        echo "<a href='etterem?eid=$etteremID'>Étterem előnézete</a>";
+        echo "<a href='fogado?eid=$etteremID'>Fogadó előnézete</a>";
     }
 
 

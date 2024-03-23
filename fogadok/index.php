@@ -55,7 +55,7 @@
             </div> 
             <a href="">Ügyfélszolgálat</a>
             <a href="regfaj">Regisztráció</a>
-            <a href="https://loadeat.com">Lakáséttermek</a>
+            <a href="../lakasetterem">Lakáséttermek</a>
             <a href="bejelentkezes">Belépés</a>
         </div>
 
@@ -68,7 +68,7 @@
                 <a href="">Ügyfélszolgálat</a>
                 <a href="regfaj">Regisztráció</a>
                 <a href="bejelentkezes">Belépés</a>
-                <a href="https://loadeat.com">Lakáséttermek</a>
+                <a href="../lakasetterem">Lakáséttermek</a>
             </aside>
         <!-- TELOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
     </nav>
@@ -84,7 +84,7 @@
 $telepules = '';
 $ismetlodoMegyek = array(); // Segédtömb az ismétlődő megyék nyilvántartására
 mysqli_set_charset($conn, "utf8");
-$sql = "SELECT * FROM etterem";
+$sql = "SELECT * FROM etterem WHERE type = 'f'";
 $result = $conn->query($sql);
 
 if ($result) {

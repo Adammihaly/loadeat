@@ -18,6 +18,8 @@ if (!isset($_SESSION['ID'])) {
     exit();
 }
 
+$ProfilID = $_SESSION['ID'];
+
 
 if (isset($_GET['error'])) {
     $error = $_GET['error'];
@@ -32,6 +34,21 @@ if (isset($_GET['error'])) {
         }
 }
 
+$sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+$result = $conn->query($sql);
+
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $type = $row['type'];
+        
+
+        if ($type != 'f') {
+            header("Location: bejelentkezes");
+            exit();
+        }
+
+    }
+}
 
 ?>
 

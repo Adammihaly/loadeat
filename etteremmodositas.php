@@ -26,6 +26,22 @@ else
 
 require_once 'php/conn.php';
 
+mysqli_set_charset($conn, "utf8");
+$sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+$result = $conn->query($sql);
+
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $type = $row['type'];
+
+        if ($type != 'e') {
+            header("Location: bejelentkezes");
+            exit();
+        }
+
+    }
+}
+
 
 mysqli_set_charset($conn, "utf8");
 $sql = "SELECT * FROM etterem WHERE profID = $ProfilID";

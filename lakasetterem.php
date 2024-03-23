@@ -103,7 +103,7 @@ if (isset($_GET['fo'])) {
 $telepules = '';
 $ismetlodoMegyek = array(); // Segédtömb az ismétlődő megyék nyilvántartására
 mysqli_set_charset($conn, "utf8");
-$sql = "SELECT * FROM etterem";
+$sql = "SELECT * FROM etterem WHERE type = 'e'";
 $result = $conn->query($sql);
 
 if ($result) {

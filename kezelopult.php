@@ -51,6 +51,23 @@ if (isset($_GET['error'])) {
 
     require_once 'php/conn.php';
 
+    mysqli_set_charset($conn, "utf8");
+$sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+$result = $conn->query($sql);
+
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $type = $row['type'];
+        
+
+        if ($type != 'e') {
+            header("Location: bejelentkezes");
+            exit();
+        }
+
+    }
+}
+
 ?>
 
 
@@ -73,11 +90,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb' onclick='linketteremreg()'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
     }
     else
     {
-        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()''><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
+        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";
     }
 
 
@@ -107,11 +124,11 @@ if (isset($_GET['error'])) {
         $etteremID = $row['etteremID'];
 
     if ($vaneetterem != 1) {
-        echo "<p id='etterem_hozzaadasa_gomb onclick='linketteremreg()''><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
+        echo "<p id='etterem_hozzaadasa_gomb' onclick='linketteremreg()'><i class='fa-solid fa-plus'></i>Étterem hozzáadása</p>";
     }
     else
     {
-        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()''><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";    
+        echo "<p id='etterem_szerkesztese' onclick='linketteremmodositas()'><i class='fa-solid fa-gear'></i>Étterem szerkesztése</p>";    
     }
 
 
@@ -397,6 +414,7 @@ if ($nincsetterem != 1) {
     }
 
 $szamlalo2 = $szamlalo1;
+$szamlalo3 = 0;
 
 if ($nincsetterem != 1) {
     
@@ -542,6 +560,7 @@ if ($nincsetterem != 1) {
             </div>";
 
             $szamlalo2++;
+            $szamlalo3++;
 
 
         }
@@ -549,10 +568,10 @@ if ($nincsetterem != 1) {
     }
     }}
 
-    if ($szamlalo1 == 0) {
+    if ($szamlalo3 == 0) {
         echo "<div class='nincs_foglalas'>
                 <i class='fa-solid fa-store-slash'></i>
-                <h2>Nincsennek aktív foglalások... még</h2>
+                <h2>Nincsennek foglalási előzmények... még</h2>
             </div>";
     }
 

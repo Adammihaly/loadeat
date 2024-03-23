@@ -17,7 +17,9 @@ if (!isset($_SESSION['ID'])) {
     header("Location: bejelentkezes");
     exit();
 }
+$ProfilID = $_SESSION['ID'];
 
+require_once 'php/conn.php';
 
 if (isset($_GET['error'])) {
     $error = $_GET['error'];
@@ -30,6 +32,22 @@ if (isset($_GET['error'])) {
         else if ($error == 'filesize') {
             echo "<script type='text/javascript'>alert('Hibás adatok. A feltöltött képek között rendszerünk talált olyanokat, melyek mérete meghaladja az általunk megadott maximumot, mely 7 Megabyte.')</script>";
         }
+}
+
+mysqli_set_charset($conn, "utf8");
+$sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
+$result = $conn->query($sql);
+
+if ($result) {
+    while ($row = $result->fetch_assoc()) {
+        $type = $row['type'];
+
+        if ($type != 'e') {
+            header("Location: bejelentkezes");
+            exit();
+        }
+
+    }
 }
 
 
