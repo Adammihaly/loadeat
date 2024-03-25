@@ -23,7 +23,8 @@
 $telepules = '';
 $ismetlodoMegyek = array(); // Segédtömb az ismétlődő megyék nyilvántartására
 
-$sql = "SELECT * FROM etterem";
+mysqli_set_charset($conn, "utf8");
+$sql = "SELECT * FROM etterem WHERE type = 'e'";
 $result = $conn->query($sql);
 
 if ($result) {
@@ -96,7 +97,7 @@ echo $telepules;
             require_once 'php/conn.php';
 
 
-            $sql = "SELECT * FROM etterem";
+            $sql = "SELECT * FROM etterem WHERE type = 'e'";
             $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()) 
             {

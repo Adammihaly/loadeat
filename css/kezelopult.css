@@ -1,0 +1,498 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+body
+{
+    display: flex;
+
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+aside
+{
+    width: 25%;
+
+    background-color: #363740;
+    color: white;
+
+    padding: 3vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    & img
+    {
+        width: 50%;
+    }
+
+    & h2, label
+    {
+
+        font-size: 2vw;
+    }
+
+    & ol
+    {
+        font-size: 1.5vw;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        & p
+        {
+            position: relative;
+            cursor: pointer;
+            width: fit-content;
+
+            .fa-solid
+            {
+                margin-right: .5em;
+            }
+        }
+
+        & p::after
+        {
+            position: absolute;
+            content: '';
+            width: 0%;
+            height: .5px;
+            background-color: white;
+            bottom: -20%;
+            left: 0;
+
+            transition: all ease 0.3s;
+
+        }
+
+        & p:hover::after
+        {
+            width: 100%;
+        }
+    }
+
+    & a, a:visited
+    {
+        font-size: 1.5vw;
+        color: white;
+        text-decoration: none;
+
+        .fa-solid
+        {
+            margin-right: .5em;
+        }
+    }
+}
+
+.telefonos_menu
+{
+    display: none;
+}
+
+main
+{
+    width: 80%;
+    background-color: #F3696D;
+
+    position: relative;
+
+    nav
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5vw;
+
+        
+
+        & a, a:visited
+        {
+            font-size: 1.3vw;
+            text-decoration: none;
+            color: white;
+
+            .fa-solid
+            {
+                margin-right: .5em;
+            }
+        }
+
+        .search_wrap
+        {
+            background-color: white;
+            padding: .5vw;
+            border-radius: 1em;
+            width: fit-content;
+            color: gray;
+
+            & input
+            {
+                border: none;
+                outline: none;
+                font-size: 1.2vw;
+            }
+
+            .fa-solid
+            {
+                font-size: 1.2vw;
+            }
+        }
+    }
+
+    .telefonos
+    {
+        display: none;
+    }
+
+    .kezelopult, .elozmenyek, .foglalasok
+    {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        padding: 1vw;
+
+        color: white;
+
+
+        & h1, label
+        {
+            font-size: 2vw;
+        }
+
+        & h2
+        {
+            font-size: 1.5vw;
+            text-align: center;
+            width: 80%;
+        }
+
+        .szoveg_wrapper
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5em;
+            
+        }
+
+        .foglalas_wrapper
+        {
+            margin-top: 2vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            padding: 1vw;
+            border: 1px solid white;
+
+            .details
+            {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+
+                .iconwrap
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .3em;
+    
+                    font-size: 1.5vw;
+                }
+            }
+
+            #see_more
+            {
+                margin-top: .5em;
+                font-size: 2vw;
+                cursor: pointer;
+                margin-bottom: 1em;
+
+            }
+
+            #see_more.active + table {
+                display: table;
+            }
+            
+            table {
+                display: none;
+                font-size: 1.2vw;
+                border-collapse: collapse; 
+                width: 100%; 
+                margin: 0 auto; 
+              }
+              
+              th, td {
+                padding: 1vw;
+                border: 1px solid #ddd;
+                text-align: left;
+              }
+              
+              th {
+                font-weight: bold; 
+              }
+        }
+    }
+
+
+    .kezelopult
+    {
+                
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+
+        & a, a:visited
+        {
+            text-decoration: none;
+            color: white;
+            padding: 1vw;
+            border-radius: .5vw;
+            font-size:1.5vw;
+            
+            background-color: #ED1B24;
+        }
+
+        & p
+        {
+            font-size: 1.2vw;
+        }
+
+        .gomb_wrap
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .5vh;
+        }
+    }
+
+    .foglalasok, .elozmenyek
+    {
+        overflow-y: auto;        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        & h1
+        {
+            border-bottom: .2vh solid white;
+        }
+
+       
+        .nincs_foglalas
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+
+            .fa-solid
+            {
+                margin-top: 1em;
+                font-size: 6vw;
+            }
+
+            & h2
+            {
+                margin-top: 2em;
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    .foglalasok
+    {
+        display: none;
+    }
+
+    .elozmenyek
+    {
+        display: none;
+    }
+}
+
+@media (max-width:850px) {
+    
+    & aside
+    {
+        display: none;
+    }
+
+    .telefonos_menu
+    {
+        display: flex;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 50%;
+        width: 40%;
+        z-index: 100;
+        transform: translate(105%);
+
+        transition: all ease 0.3s;
+
+        & h2,label,a
+        {
+            font-size: 2vh;
+        }
+
+        & h2,label
+        {
+            opacity: 0;
+        }
+
+        & ol
+        {
+            font-size: 1.5vh;
+            align-items: center;
+            word-break: keep-all;
+            white-space: nowrap;
+
+        }
+
+    }
+
+
+
+    main
+    {
+        width: 100%;
+
+        nav
+        {
+            display: none;
+        }
+
+        .telefonos
+        {
+            display: flex;
+            color: white;
+            padding: 5vw;
+
+            & img
+            {
+                height: 80%;
+                width: 30%;
+            }
+
+            .fa-solid
+            {
+                font-size: 3vh;
+                z-index: 1000;
+            }
+        }
+
+        .kezelopult, .elozmenyek, .foglalasok
+        {
+            padding: 1vw;    
+    
+            & h1, label
+            {
+                font-size: 3vh;
+            }
+    
+            & h2
+            {
+                font-size: 1.5vh;
+                text-align: center;
+                width: 80%;
+            }
+    
+            .szoveg_wrapper
+            {
+                gap: 1.5em;                
+            }
+    
+            .foglalas_wrapper
+            {
+                width: 80%;
+                padding: 1dvh;
+    
+                .details
+                {
+
+                    padding: 1vh;
+                    flex-direction: column;
+                    gap: 1em;
+    
+                    .iconwrap
+                    {        
+                        font-size:1.5vh;
+                    }
+                }
+    
+                #see_more
+                {
+                    margin-top: 1em;
+                    font-size: 2vh;    
+                }
+
+                
+                table {
+                    font-size: 1.5vh;
+                  }
+            }
+        }
+
+        .kezelopult
+        {
+            & a, a:visited
+            {
+                padding: 1vh;
+                border-radius: .5vh;
+                font-size:2vh;
+            }
+    
+            & p
+            {
+                font-size: 1.5vh;
+            }
+    
+            .gomb_wrap
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: .5vh;
+            }
+        }
+
+        .foglalasok, .elozmenyek
+        {          
+            .nincs_foglalas
+            {
+    
+                .fa-solid
+                {
+                    margin-top: .5em;
+                    font-size: 10vh;
+                }
+    
+                & h2
+                {
+                    margin-top: 1em;
+                    font-size: 1.5vh;
+                }
+            }
+        }
+    
+    }
+}

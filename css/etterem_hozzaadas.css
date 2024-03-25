@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    padding-inline: 2vw;
+    padding-top: 2vw;
+    font-family: 'Inter';
+    position: relative;
+    height: 100dvh;
+    background-color: rgb(237, 237, 237);
+}
+
+h1
+{
+    font-size: 2vw;
+    margin-bottom: 1vh;
+    height: 6vh;
+}
+
+form
+{
+    
+    height: 80vh;
+    position: relative;
+
+    & section
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:0 ;
+        height:0 ;
+        opacity: 0;
+        color: rgb(0, 0, 0);
+        overflow-y: auto;
+        font-size: 1.2vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+
+
+        & h2
+        {
+            text-align: center;
+        }
+
+        .input_field
+        {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-block-end: 3vw;
+            padding-block-start: 2vw;
+            padding-inline: 2vw;
+            border-radius: .3vw;
+            border: .3px solid gray;
+            background-color: white;
+            gap: 1vh;
+
+            & input
+            {
+                width: 30%;
+                height: 5vh;
+                padding: 1vw;
+                outline: solid .3px gray;
+                border: none;
+                font-size: 1.1vw;
+            }
+
+            & textarea
+            {
+                padding: 1vw;
+                outline: solid .3px gray;
+                border: none;
+                font-size: 1.1vw;
+            }
+
+            & i
+            {
+                position: absolute;
+                left: 55%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40%;
+                font-size: 1.1vw;
+                color: gray;
+                font-style: normal;
+
+              
+            }
+        }
+
+        .checkbox_field
+        {
+            position: relative;
+            padding-block-end: 3vw;
+            padding-block-start: 2vw;
+            padding-inline: 2vw;
+            border-radius: 1vw;
+            border: 1px solid gray;
+            background-color: white;
+
+            & input
+            {
+                margin-top: .5vh;
+                width: 1vw;
+                aspect-ratio: 1;
+            }
+
+            & i
+            {
+                position: absolute;
+                left: 55%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40%;
+                font-size: 1.1vw;
+                color: gray;
+                font-style: normal;
+            }
+        }
+
+        .kep_field
+        {
+            position: relative;
+            padding-block-end: 3vw;
+            padding-block-start: 2vw;
+            padding-inline: 2vw;
+            border-radius: 1vw;
+            border: 1px solid gray;
+            background-color: white;
+
+            & input
+            {
+                margin-top: 2vh;
+                font-size: 1.1vw;
+            }
+        }
+    }
+
+
+
+
+  
+}
+
+a
+{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    width: 8vw;
+    padding-inline: 1vw;
+    padding-block: .5vw;
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 1vw;
+}
+
+.buttons
+{
+    position: absolute;
+    bottom: -9%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    
+    & button
+    {
+        font-size: 1.4vw;
+        padding: 0.3vw;
+        width: 10%;
+        outline: none;
+        border: none;
+        background-color: red;
+        color: white;
+        border-radius: .5vw;
+        cursor: pointer;
+
+       
+    }
+
+    #submit
+    {
+        font-style: italic;
+        font-weight: bolder;
+    }
+
+    
+}
+
+
+@media (max-width:850px) {
+
+    h1
+    {
+        font-size: 2vh;
+        margin: 0;
+        height: 4vh;
+    }
+    
+    form
+    {
+        height: 85dvh;
+        border: 1px solid black;
+
+        & section
+        {
+            font-size: 1.3vh;
+
+            .input_field
+            {
+                border-radius: .5vh;
+
+                & input
+                {
+                    width: 50%;
+                    padding: 1vh;
+                    height: fit-content;
+                    outline: solid 1px gray;
+                    border: none;
+                    font-size: 1vh;
+                    border-radius: .2vh;
+                }
+
+                & i
+                {
+                    font-size: .8vh;
+                    text-align: center;
+                }
+
+                & textarea
+                {
+                    font-size: 1vh;
+                }
+
+            }
+
+            .checkbox_field
+            {
+                
+                
+                & p
+                {
+                    font-size: 1.1vh;
+                }
+
+                .container
+                {
+                    transform: translateY(-10%);
+                }
+
+                & input
+                {
+                    /* margin-top: .5vh; */
+                    width: .8vh;
+                    transform: translateY(35%);
+                                        
+                    
+                }
+
+                & label
+                {
+                    font-size: 1vh;
+                }
+
+             
+                & i
+                {
+                    transform: translate(10%,-40%);
+                    font-size: .8vh;
+                    text-align: center;
+                }
+            }
+
+            .kep_field
+            {    
+                & input
+                {
+                    margin-top: 1vh;
+                    font-size: 1vh;
+                }
+            }
+        }
+    }
+
+    .buttons
+    {
+        gap: 20%;
+
+        & button
+        {
+            border-radius: .5vh;
+            font-size: 2vh;
+            width: fit-content;
+            padding-inline: 2.5vh;
+            padding-block: 1vh;
+        }
+    }
+
+    a
+    {
+        top: .8%;
+        right: 5%;
+        width: fit-content;
+    }
+}

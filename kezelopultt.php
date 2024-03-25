@@ -38,6 +38,18 @@ if (isset($_GET['error'])) {
         }
     }
 
+
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == "noneed") {
+            echo "  
+                
+            <script type='text/javascript'>
+            if(confirm('Az étterem sikeresen módosítva lett!')) document.location = 'kezelopultt';
+            else(document.location = 'kezelopultt')
+        </script> ";
+        }
+    }
+
 ?>
 
 
@@ -134,7 +146,7 @@ if (isset($_GET['error'])) {
 	<?php
 
 	require_once 'php/conn.php';
-
+	mysqli_set_charset($conn, "utf8");
 	$sql = "SELECT * FROM tulaj_prof WHERE ID = $ProfilID";
 		$result = $conn->query($sql);
 	while ($row = $result->fetch_assoc()) {
@@ -149,7 +161,7 @@ if (isset($_GET['error'])) {
 	}
 	else
 	{
-		echo "<a class='etterem' href='adatvaltoztatas'>
+		echo "<a class='etterem' href='etteremmodositas'>
 		<img src='img/edit.png' alt=''>
 		<h3>Étterem kezelése</h3>
 	</a>";

@@ -78,7 +78,7 @@ $eredmeny = mysqli_stmt_get_result($stmt);
 
 
 function createUser($conn,  $id, $name, $email, $pwd, $ip, $verification_code, $lang) {
-$sql = "INSERT INTO vendeg_prof (ID,Felhasznalonev, Email, Jelszo, IP, Hitelesito ) VALUES (?,?,?,?,?,?);";
+$sql = "INSERT INTO vendeg_prof (ID,Felhasznalonev, Email, Jelszo, IP, Hitelesito, type ) VALUES (?,?,?,?,?,?,?);";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt, $sql)) {
 if ($lang == 'hu') {
@@ -97,8 +97,9 @@ exit();
 }
 
 $pwdsecound = password_hash($pwd, PASSWORD_DEFAULT);
+$type = 'e';
 
-mysqli_stmt_bind_param($stmt, "ssssss", $id, $name, $email, $pwdsecound, $ip, $verification_code);
+mysqli_stmt_bind_param($stmt, "sssssss", $id, $name, $email, $pwdsecound, $ip, $verification_code, $type);
 mysqli_stmt_execute($stmt);
 
 mysqli_stmt_close($stmt);
@@ -122,7 +123,7 @@ else if ($lang == 'rs') {
 
 
 function createUserTulaj($conn,  $id, $name, $email, $pwd, $ip, $verification_code, $lang) {
-$sql = "INSERT INTO tulaj_prof (ID,Felhasznalonev, Email, Jelszo, IP, Hitelesito ) VALUES (?,?,?,?,?,?);";
+$sql = "INSERT INTO tulaj_prof (ID,Felhasznalonev, Email, Jelszo, IP, Hitelesito, type) VALUES (?,?,?,?,?,?,?);";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt, $sql)) {
 if ($lang == 'hu') {
@@ -139,9 +140,10 @@ exit();
 }
 }
 
+$type = 'e';
 $pwdsecound = password_hash($pwd, PASSWORD_DEFAULT);
 
-mysqli_stmt_bind_param($stmt, "ssssss", $id, $name, $email, $pwdsecound, $ip, $verification_code);
+mysqli_stmt_bind_param($stmt, "sssssss", $id, $name, $email, $pwdsecound, $ip, $verification_code, $type);
 mysqli_stmt_execute($stmt);
 
 mysqli_stmt_close($stmt);
@@ -273,15 +275,15 @@ else if ($lang == 'rs') {
 
 
 if ($lang == 'hu') {
-	header("location: ../kezelopultt") ;
+	header("location: ../kezelopult") ;
 		exit();
 }
 else if ($lang == 'en') {
-	header("location: ../en/kezelopultt") ;
+	header("location: ../en/kezelopult") ;
 		exit();
 }
 else if ($lang == 'rs') {
-	header("location: ../rs/kezelopultt") ;
+	header("location: ../rs/kezelopult") ;
 		exit();
 }
 	}
@@ -330,7 +332,7 @@ function szures($string) {
   foreach ($sql_szo_lista as $sql_szo) {
     if (stripos($string, $sql_szo) !== false) {
       
-      header("Location: https://loadeat.com?error=fwd");
+      header("Location: https://loadeat.com/lakasetterem?error=fwd");
       exit();
     }
   }
@@ -347,7 +349,7 @@ function vedelem($string)
   foreach ($sql_szo_lista as $sql_szo) {
     if (stripos($string, $sql_szo) !== false) {
       
-      header("Location: https://loadeat.com?error=fwd");
+      header("Location: https://loadeat.com/lakasetterem?error=fwd");
       exit();
     }
   }  

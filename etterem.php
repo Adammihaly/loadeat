@@ -12,7 +12,7 @@ require_once 'php/conn.php';
         $ID = $_GET['eid'];
     }
 
-
+    mysqli_set_charset($conn, "utf8");
         $sql = "SELECT * FROM etterem WHERE ID = $ID";
             $result = $conn->query($sql);
             while ($row = $result->fetch_assoc()) 
@@ -531,8 +531,24 @@ if (isset($_GET['f'])) {
 
 
                                 <label>Első menü száma</label><input type="number" name="menu1" id="elsomenu" min="0" onchange="updateTotal()">
-                                <label>Második menü száma</label><input type="number" name="menu2" id="masodikmenu" min="0" onchange="updateTotal()">
-                                <label>Harmadik menü száma</label><input type="number" name="menu3" id="harmadikmenu" min="0" onchange="updateTotal()">
+                                
+                                <?php
+                                if ($menu_2_areur != 0) {
+                                     echo "<label>Második menü száma</label><input type='number' name='menu2' id='masodikmenu' min='0' onchange='updateTotal()'>";
+                                 } 
+                                 else if ($menu_2_areur == 0) {
+                                     echo "<input type='hidden' name='menu2' id='masodikmenu' min='0' onchange='updateTotal()'>";
+                                 } 
+                                 if ($menu_3_areur != 0) {
+                                     echo "<label>Harmadik menü száma</label><input type='number' name='menu3' id='harmadikmenu' min='0' onchange='updateTotal()'>";
+                                 } 
+                                 else if ($menu_3_areur == 0) {
+                                     echo "<input type='hidden' name='menu3' id='harmadikmenu' min='0' onchange='updateTotal()'>";
+                                 } 
+                                
+
+                                ?>
+                                
                             
 
                                 <?php
