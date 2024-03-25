@@ -34,6 +34,7 @@ else
 	$etteremTelepules = vedelem($_POST['telepules']);
 	$etteremHazszam = vedelem($_POST['utcahazszam']);
 	$onlineFizetes = 1;
+	$type = 'e';
 
 	if (isset($_POST['keszpenz'])) {
 		$kezpenzFizetes = 1;
@@ -272,7 +273,7 @@ else
 
 
 mysqli_set_charset($conn, "utf8");
-    $sql = "INSERT INTO etterem (profID, ID, tulajdonosNev, igazolvanyazonosito, megye, telefon, tulajcim, iban, etteremnev, orszag, telepules, cim, onlinefizetes, helykeszpenz, helykartya, etteremkepek, etteremleiras, menuID) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+    $sql = "INSERT INTO etterem (profID, ID, tulajdonosNev, igazolvanyazonosito, megye, telefon, tulajcim, iban, etteremnev, orszag, telepules, cim, onlinefizetes, helykeszpenz, helykartya, etteremkepek, etteremleiras, menuID, type) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 $stmt = mysqli_stmt_init($conn);
 if (!mysqli_stmt_prepare($stmt, $sql)) {
 header("Location: " . $_SERVER['HTTP_REFERER']);
@@ -280,7 +281,7 @@ header("Location: " . $_SERVER['HTTP_REFERER']);
 }
 
 
-mysqli_stmt_bind_param($stmt, "ssssssssssssssssss",$ProfilID, $ID, $tulajNev, $igazolvanyAzon, $szulDatum, $telefon, $cim, $iban, $etteremNev, $etteremOrszag, $etteremTelepules, $etteremHazszam, $onlineFizetes, $kezpenzFizetes, $kartyaFizetes, $kepekEtterem, $etteremBemutatas, $menuID);
+mysqli_stmt_bind_param($stmt, "sssssssssssssssssss",$ProfilID, $ID, $tulajNev, $igazolvanyAzon, $szulDatum, $telefon, $cim, $iban, $etteremNev, $etteremOrszag, $etteremTelepules, $etteremHazszam, $onlineFizetes, $kezpenzFizetes, $kartyaFizetes, $kepekEtterem, $etteremBemutatas, $menuID, $type);
 mysqli_stmt_execute($stmt);
 mysqli_stmt_close($stmt);
 
