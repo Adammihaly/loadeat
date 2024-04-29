@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+:root
+{
+	--piros: #ed1b24;
+	--feher: #fff;
+	--menu-color: #f0efed;
+	--fekete: #000;
+	--mg-left: 17%;
+	--mg-right: 17%;
+	--menu-szelesseg: 67%;
+	--main-font: 'Montserrat Alternates', sans-serif;
+	--s-font: 'Nunito Sans', sans-serif;
+}
+
+body
+{
+	overflow-x: none;
+}
+
+& main
+{
+	background-image: linear-gradient(rgba(28, 28, 28,0.8),rgba(28, 28, 28,0.8)),url(../img/etterem4.jpg);
+  	background-position: center;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	height: 100dvh;
+  	display: flex;
+  	align-items: center;
+  	text-align: center;
+  	justify-content: center;
+
+  	& form
+  	{
+  		width: 40%;
+  	}
+
+  	& label
+  	{
+  		color: var(--feher);
+  		font-family: var(--s-font);
+  		font-size: 2rem;
+  		font-weight: bold;
+  	}
+
+  	& input
+  	{
+  		width: 100%;
+  		margin: 2% 0 3% 0;
+  		padding: 1.5%;
+  		font-size: 120%;
+  		border: solid 2px var(--piros);
+  		border-radius: 15px;
+  		font-family: var(--s-font);
+  	}
+
+  	& textarea
+  	{
+  		width: 100%;
+  		margin: 2% 0 3% 0;
+  		padding: 1.5%;
+  		font-size: 120%;
+  		border: solid 2px var(--piros);
+  		border-radius: 15px;
+  		font-family: var(--s-font);
+  		height: 15dvh;
+  	}
+
+  	& button
+  	{
+  		padding: 2% 8% 2% 8%;
+  		background-color: var(--piros);
+  		font-family: var(--s-font);
+  		font-size: 110%;
+  		color: var(--feher);
+  		border-radius: 15px;
+  		text-decoration: none;
+  		font-weight: bold;
+  		border: solid 2px var(--piros);
+  		transition: 0.4s;
+  		cursor: pointer;
+  	}
+
+  	& button:hover
+  	{
+  		background-color: #8a1318;
+  		transition: 0.4s;
+  	}
+
+}
+
+
+
+@media only screen and (max-width: 550px) {
+
+& main
+{
+  	& form
+  	{
+  		width: 80%;
+  	}
+
+  	& label
+  	{
+  		color: var(--feher);
+  		font-family: var(--s-font);
+  		font-size: 1.3rem;
+  		font-weight: bold;
+  	}
+
+  	& input
+  	{
+  		width: 100%;
+  		margin: 2% 0 3% 0;
+  		padding: 2%;
+  		font-size: 90%;
+  		border: solid 1px var(--piros);
+  		border-radius: 7px;
+  		font-family: var(--s-font);
+  	}
+
+  	& textarea
+  	{
+  		width: 100%;
+  		margin: 2% 0 3% 0;
+  		padding: 2%;
+  		font-size: 90%;
+  		border: solid 1px var(--piros);
+  		border-radius: 7px;
+  		font-family: var(--s-font);
+  		height: 10dvh;
+  	}
+
+  	& button
+  	{
+  		padding: 2% 10% 2% 10%;
+  		font-size: 90%;
+  		color: var(--feher);
+  		border-radius: 8px;
+  		text-decoration: none;
+  		font-weight: bold;
+  		transition: 0.4s;
+  		cursor: pointer;
+  	}
+}
+
+
+}

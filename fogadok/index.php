@@ -53,7 +53,7 @@
                 <p><img src="../img/america.webp" alt=""> <a href="">USD</a></p>
                 <p><img src="../img/srb.webp" alt=""> <a href="">RSD</a></p>
             </div> 
-            <a href="">Ügyfélszolgálat</a>
+            <a href="../support">Ügyfélszolgálat</a>
             <a href="regfaj">Regisztráció</a>
             <a href="../lakasetterem">Lakáséttermek</a>
             <a href="bejelentkezes">Belépés</a>
@@ -65,7 +65,7 @@
                 <p><img src="../img/srb.webp" alt=""> <a href="">RSD</a></p>
                 <p><img src="../img/america.webp" alt=""> <a href="">USD</a></p>
                 <p><img src="../img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
-                <a href="">Ügyfélszolgálat</a>
+                <a href="../support">Ügyfélszolgálat</a>
                 <a href="regfaj">Regisztráció</a>
                 <a href="bejelentkezes">Belépés</a>
                 <a href="../lakasetterem">Lakáséttermek</a>
@@ -173,9 +173,9 @@ if ($result) {
             </ul>
             <ul>
                 <a href=""><b>Népszerű oldalak</b></a>
-                <a href="">Kezdőlap</a>
-                <a href="">Bejelentkezés</a>
-                <a href="">Regisztráció</a>
+                <a href="https://loadeatcom">Kezdőlap</a>
+                <a href="bejelentkezes">Bejelentkezés</a>
+                <a href="regfaj">Regisztráció</a>
             </ul>
             <ul>
                 <a href=""><b>Kiemelt partnereink</b></a>
@@ -184,8 +184,8 @@ if ($result) {
                 <a href="">Nora BIO Wellness</a>
             </ul>
             <ul>
-                <a href=""><b>Hibaelhárítás</b></a>
-                <a href="">Ügyfélszolgálat</a>
+                <a href="../support"><b>Hibaelhárítás</b></a>
+                <a href="../support">Ügyfélszolgálat</a>
                 <a href=""><i class="fa-solid fa-envelope"></i> loadeat@loadeat.com</a>
             </ul>
         </div>

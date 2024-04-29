@@ -70,7 +70,7 @@ if (isset($_GET['fo'])) {
                 <p><img src="./img/eng.webp" alt="zaszlo"> <a href="en/">EUR</a></p>
                 <p><img src="./img/srb.webp" alt="zaszlo"> <a href="rs/">RSD</a></p>
             </div> 
-            <a href="">Ügyfélszolgálat</a>
+            <a href="support">Ügyfélszolgálat</a>
             <a href="regfaj">Regisztráció</a>
             <a href="fogadok/">Fogadók</a>
             <a href="bejelentkezes">Belépés</a>
@@ -82,7 +82,7 @@ if (isset($_GET['fo'])) {
                 <p><img src="./img/srb.webp" alt=""> <a href="rs/">RSD</a></p>
                 <p><img src="./img/eng.webp" alt=""> <a href="en/">EUR</a></p>
                 <p><img src="./img/Flag-Hungary.webp" alt=""> <a href="">HUF</a></p>
-                <a href="">Ügyfélszolgálat</a>
+                <a href="support">Ügyfélszolgálat</a>
                 <a href="regfaj">Regisztráció</a>
                 <a href="bejelentkezes">Belépés</a>
                 <a href="fogadok/">Fogadók</a>
@@ -222,8 +222,8 @@ if ($result) {
                 <a href="">Nora BIO Wellness</a>
             </ul>
             <ul>
-                <a href=""><b>Hibaelhárítás</b></a>
-                <a href="">Ügyfélszolgálat</a>
+                <a href="support"><b>Hibaelhárítás</b></a>
+                <a href="support">Ügyfélszolgálat</a>
                 <a href="mailto:loadeat@loadeat.com"><i class="fa-solid fa-envelope"></i> loadeat@loadeat.com</a>
             </ul>
         </div>

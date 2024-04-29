@@ -47,24 +47,24 @@
 		<form method="POST" action="php/support.php">
 			 <div class="input_wrapper">
                         <div class="mezo">
-                            <label for="vezeteknev">Vezetéknév</label>
+                            <label for="vezeteknev">Vezetéknév</label><br>
                             <input type="text" id="vezeteknev" placeholder="Vezetéknév..." name="vnev" required>
                         </div>
                         <div class="mezo">
-                            <label for="keresztnev">Keresztnév</label>
+                            <label for="keresztnev">Keresztnév</label><br>
                             <input type="text" id="keresztnev" placeholder="Keresztnév..." name="knev" required>
                         </div>
              </div>
                 
                     <div class="mezo uzenet">
-                        <label for="email">Email cím</label>
+                        <label for="email">Email cím</label><br>
                         <input type="email" id="email" placeholder="Email cím..." name="email" required>
                         <input type="hidden" name="email2" placeholder="Email2..." value="a" required>
                     </div>
 
                     <div class="mezo uzenet">
-                        <label for="uzenet">Üzenet</label>
-                        <input type="text" id="uzenet" placeholder="Üzenet..." name="uzenet" required>
+                        <label for="uzenet">Üzenet</label><br>
+                        <textarea type="text" id="uzenet" placeholder="Üzenet..." name="uzenet" required></textarea>
                     </div>
 
                     <button type="submit">Küldés</button>
